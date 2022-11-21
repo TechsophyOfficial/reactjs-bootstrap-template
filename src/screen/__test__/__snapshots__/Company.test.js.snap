@@ -1,0 +1,760 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Company should render Company correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="content-body-div"
+        style="display: block; padding: 50px 150px;"
+      >
+        <div
+          class="page-heading"
+        >
+          <div
+            class="page-company"
+          >
+            Company
+          </div>
+          <img
+            alt=""
+            src="https://techsophy.com/assets/images/iso_image.png"
+          />
+        </div>
+        <p
+          class="page-sub"
+        >
+          Vision
+        </p>
+        <div
+          class="row"
+          style="display: flex;"
+        >
+          <div
+            class="col-6"
+            style="font-size: 48px; line-height: 1.1;"
+          >
+            <span
+              class="grey-text"
+            >
+              Inspired
+            </span>
+             Decision Making
+            <br />
+            <span
+              class="grey-text"
+            >
+              based on
+            </span>
+            <br />
+            Trusted Technology,
+            <br />
+            <span
+              class="grey-text"
+            >
+              powered by
+            </span>
+            <br />
+            Passionate Individuals.
+          </div>
+          <div
+            style="text-align: center; margin-left: 10%;"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="achv"
+              >
+                <img
+                  alt=""
+                  src="https://techsophy.com/assets/images/achievement1.png"
+                />
+                <div
+                  class="achv-text"
+                >
+                  2009
+                </div>
+                <label
+                  class="achv-desc"
+                >
+                  Vision to Innovate & Incubate Startup’s
+                </label>
+              </div>
+              <div
+                class="achv"
+              >
+                <img
+                  alt=""
+                  src="https://techsophy.com/assets/images/achievement2.png"
+                />
+                <div
+                  class="achv-text"
+                >
+                  150+
+                </div>
+                <label
+                  class="achv-desc"
+                >
+                  Associates
+                </label>
+              </div>
+              <div
+                class="achv"
+              >
+                <img
+                  alt=""
+                  src="https://techsophy.com/assets/images/achievement3.png"
+                />
+                <div
+                  class="achv-text"
+                >
+                  60+
+                </div>
+                <label
+                  class="achv-desc"
+                >
+                  Customers
+                </label>
+              </div>
+            </div>
+            <div
+              class="row"
+              style="margin-top: 30px;"
+            >
+              <div
+                class="achv"
+              >
+                <img
+                  alt=""
+                  src="https://techsophy.com/assets/images/achievement4.png"
+                />
+                <div
+                  class="achv-text"
+                >
+                  30%
+                </div>
+                <label
+                  class="achv-desc"
+                >
+                  Y-o-Y Growth
+                </label>
+              </div>
+              <div
+                class="achv"
+              >
+                <img
+                  alt=""
+                  src="https://techsophy.com/assets/images/achievement5.png"
+                />
+                <div
+                  class="achv-text"
+                >
+                  8
+                </div>
+                <label
+                  class="achv-desc"
+                >
+                  Partnerships
+                </label>
+              </div>
+              <div
+                class="achv"
+              >
+                <img
+                  alt=""
+                  src="https://techsophy.com/assets/images/achievement6.png"
+                />
+                <div
+                  class="achv-text"
+                >
+                  10+
+                </div>
+                <label
+                  class="achv-desc"
+                >
+                  Innovations & Investments
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p
+          class="page-sub"
+          style="margin-top: 30px;"
+        >
+          Journey
+        </p>
+        <div
+          class="row "
+        >
+          <div
+            class="journey-row row"
+          >
+            <div
+              class="col-5"
+            >
+              <img
+                alt=""
+                class="img-fluid"
+                src="https://techsophy.com/assets/images/2009to2015.png"
+              />
+            </div>
+            <div
+              class="col-7"
+              style="padding-left: 0px;"
+            >
+              <label
+                class="journey-label"
+              >
+                BPM & ECM as Core
+              </label>
+              <ul
+                class="journey-list"
+              >
+                <li>
+                  BPM & ECM services
+                </li>
+                <li>
+                  Support
+                </li>
+                <li>
+                  System Generation
+                </li>
+              </ul>
+              <label
+                class="journey-label"
+              >
+                Products & Solutions
+              </label>
+              <ul
+                class="journey-list"
+              >
+                <li>
+                  AutoRABIT
+                </li>
+                <li>
+                  Xbox Kinetic
+                </li>
+                <li>
+                  SocialConnext
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="journey-row row"
+          >
+            <div
+              class="col-5"
+            >
+              <img
+                alt=""
+                class="img-fluid"
+                src="https://techsophy.com/assets/images/2016to2020.png"
+              />
+            </div>
+            <div
+              class="col-7"
+              style="padding-left: 0px;"
+            >
+              <label
+                class="journey-label"
+              >
+                BPM & ECM as Core
+              </label>
+              <ul
+                class="journey-list"
+              >
+                <li>
+                  MiGile
+                </li>
+                <li>
+                  Social Connext
+                </li>
+                <li>
+                  DoBPM
+                </li>
+              </ul>
+              <label
+                class="journey-label"
+              >
+                Products & Solutions
+              </label>
+              <ul
+                class="journey-list"
+              >
+                <li>
+                  Alfresco
+                </li>
+                <li>
+                  Decooda
+                </li>
+                <li>
+                  Block Chain
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="journey-row row"
+          >
+            <div
+              class="col-5"
+            >
+              <img
+                alt=""
+                class="img-fluid"
+                src="https://techsophy.com/assets/images/2021to2025.png"
+              />
+            </div>
+            <div
+              class="col-7"
+              style="padding-left: 0px;"
+            >
+              <label
+                class="journey-label"
+              >
+                Digital Process Automation
+              </label>
+              <ul
+                class="journey-list"
+              >
+                <li>
+                  Low Code, No Code
+                </li>
+                <li>
+                  Robotic Process Automation
+                </li>
+                <li>
+                  iBPMS
+                </li>
+              </ul>
+              <label
+                class="journey-label"
+              >
+                Products & Solutions
+              </label>
+              <ul
+                class="journey-list"
+              >
+                <li>
+                  Service Experience Platform
+                </li>
+                <li>
+                  Process Context Integration
+                </li>
+                <li>
+                  Omni Health
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="content-body-div"
+      style="display: block; padding: 50px 150px;"
+    >
+      <div
+        class="page-heading"
+      >
+        <div
+          class="page-company"
+        >
+          Company
+        </div>
+        <img
+          alt=""
+          src="https://techsophy.com/assets/images/iso_image.png"
+        />
+      </div>
+      <p
+        class="page-sub"
+      >
+        Vision
+      </p>
+      <div
+        class="row"
+        style="display: flex;"
+      >
+        <div
+          class="col-6"
+          style="font-size: 48px; line-height: 1.1;"
+        >
+          <span
+            class="grey-text"
+          >
+            Inspired
+          </span>
+           Decision Making
+          <br />
+          <span
+            class="grey-text"
+          >
+            based on
+          </span>
+          <br />
+          Trusted Technology,
+          <br />
+          <span
+            class="grey-text"
+          >
+            powered by
+          </span>
+          <br />
+          Passionate Individuals.
+        </div>
+        <div
+          style="text-align: center; margin-left: 10%;"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="achv"
+            >
+              <img
+                alt=""
+                src="https://techsophy.com/assets/images/achievement1.png"
+              />
+              <div
+                class="achv-text"
+              >
+                2009
+              </div>
+              <label
+                class="achv-desc"
+              >
+                Vision to Innovate & Incubate Startup’s
+              </label>
+            </div>
+            <div
+              class="achv"
+            >
+              <img
+                alt=""
+                src="https://techsophy.com/assets/images/achievement2.png"
+              />
+              <div
+                class="achv-text"
+              >
+                150+
+              </div>
+              <label
+                class="achv-desc"
+              >
+                Associates
+              </label>
+            </div>
+            <div
+              class="achv"
+            >
+              <img
+                alt=""
+                src="https://techsophy.com/assets/images/achievement3.png"
+              />
+              <div
+                class="achv-text"
+              >
+                60+
+              </div>
+              <label
+                class="achv-desc"
+              >
+                Customers
+              </label>
+            </div>
+          </div>
+          <div
+            class="row"
+            style="margin-top: 30px;"
+          >
+            <div
+              class="achv"
+            >
+              <img
+                alt=""
+                src="https://techsophy.com/assets/images/achievement4.png"
+              />
+              <div
+                class="achv-text"
+              >
+                30%
+              </div>
+              <label
+                class="achv-desc"
+              >
+                Y-o-Y Growth
+              </label>
+            </div>
+            <div
+              class="achv"
+            >
+              <img
+                alt=""
+                src="https://techsophy.com/assets/images/achievement5.png"
+              />
+              <div
+                class="achv-text"
+              >
+                8
+              </div>
+              <label
+                class="achv-desc"
+              >
+                Partnerships
+              </label>
+            </div>
+            <div
+              class="achv"
+            >
+              <img
+                alt=""
+                src="https://techsophy.com/assets/images/achievement6.png"
+              />
+              <div
+                class="achv-text"
+              >
+                10+
+              </div>
+              <label
+                class="achv-desc"
+              >
+                Innovations & Investments
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p
+        class="page-sub"
+        style="margin-top: 30px;"
+      >
+        Journey
+      </p>
+      <div
+        class="row "
+      >
+        <div
+          class="journey-row row"
+        >
+          <div
+            class="col-5"
+          >
+            <img
+              alt=""
+              class="img-fluid"
+              src="https://techsophy.com/assets/images/2009to2015.png"
+            />
+          </div>
+          <div
+            class="col-7"
+            style="padding-left: 0px;"
+          >
+            <label
+              class="journey-label"
+            >
+              BPM & ECM as Core
+            </label>
+            <ul
+              class="journey-list"
+            >
+              <li>
+                BPM & ECM services
+              </li>
+              <li>
+                Support
+              </li>
+              <li>
+                System Generation
+              </li>
+            </ul>
+            <label
+              class="journey-label"
+            >
+              Products & Solutions
+            </label>
+            <ul
+              class="journey-list"
+            >
+              <li>
+                AutoRABIT
+              </li>
+              <li>
+                Xbox Kinetic
+              </li>
+              <li>
+                SocialConnext
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="journey-row row"
+        >
+          <div
+            class="col-5"
+          >
+            <img
+              alt=""
+              class="img-fluid"
+              src="https://techsophy.com/assets/images/2016to2020.png"
+            />
+          </div>
+          <div
+            class="col-7"
+            style="padding-left: 0px;"
+          >
+            <label
+              class="journey-label"
+            >
+              BPM & ECM as Core
+            </label>
+            <ul
+              class="journey-list"
+            >
+              <li>
+                MiGile
+              </li>
+              <li>
+                Social Connext
+              </li>
+              <li>
+                DoBPM
+              </li>
+            </ul>
+            <label
+              class="journey-label"
+            >
+              Products & Solutions
+            </label>
+            <ul
+              class="journey-list"
+            >
+              <li>
+                Alfresco
+              </li>
+              <li>
+                Decooda
+              </li>
+              <li>
+                Block Chain
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="journey-row row"
+        >
+          <div
+            class="col-5"
+          >
+            <img
+              alt=""
+              class="img-fluid"
+              src="https://techsophy.com/assets/images/2021to2025.png"
+            />
+          </div>
+          <div
+            class="col-7"
+            style="padding-left: 0px;"
+          >
+            <label
+              class="journey-label"
+            >
+              Digital Process Automation
+            </label>
+            <ul
+              class="journey-list"
+            >
+              <li>
+                Low Code, No Code
+              </li>
+              <li>
+                Robotic Process Automation
+              </li>
+              <li>
+                iBPMS
+              </li>
+            </ul>
+            <label
+              class="journey-label"
+            >
+              Products & Solutions
+            </label>
+            <ul
+              class="journey-list"
+            >
+              <li>
+                Service Experience Platform
+              </li>
+              <li>
+                Process Context Integration
+              </li>
+              <li>
+                Omni Health
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
