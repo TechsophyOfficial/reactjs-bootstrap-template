@@ -1,0 +1,705 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Input should render Input(date) correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="form-control"
+      >
+        <div
+          class="makeStyles-datePicker-14 css-nen11g-MuiStack-root"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedStart MuiInputBase-adornedEnd css-2ehmn7-MuiInputBase-root-MuiOutlinedInput-root"
+            >
+              <div
+                class="MuiInputAdornment-root MuiInputAdornment-positionStart"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"
+                  />
+                </svg>
+              </div>
+              <input
+                aria-invalid="true"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd css-152mnda-MuiInputBase-input-MuiOutlinedInput-input"
+                id="mui-1"
+                placeholder="dd/mm/yyyy"
+                type="tel"
+                value=""
+              />
+              <div
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
+              >
+                <button
+                  aria-label="Choose date"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="CalendarIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="css-ihdtdm"
+                >
+                  <span
+                    class="notranslate"
+                  >
+                    ​
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="form-control"
+    >
+      <div
+        class="makeStyles-datePicker-14 css-nen11g-MuiStack-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedStart MuiInputBase-adornedEnd css-2ehmn7-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <div
+              class="MuiInputAdornment-root MuiInputAdornment-positionStart"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"
+                />
+              </svg>
+            </div>
+            <input
+              aria-invalid="true"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd css-152mnda-MuiInputBase-input-MuiOutlinedInput-input"
+              id="mui-1"
+              placeholder="dd/mm/yyyy"
+              type="tel"
+              value=""
+            />
+            <div
+              class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
+            >
+              <button
+                aria-label="Choose date"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="CalendarIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Renders Input should render Input(email) correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="form-control"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input"
+              placeholder="test"
+              type="email"
+              value="Test Value"
+            />
+            <fieldset
+              aria-hidden="true"
+              class="PrivateNotchedOutline-root-9 MuiOutlinedInput-notchedOutline"
+              style="padding-left: 8px;"
+            >
+              <legend
+                class="PrivateNotchedOutline-legend-10"
+                style="width: 0.01px;"
+              >
+                <span>
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="form-control"
+    >
+      <div
+        class="MuiFormControl-root MuiTextField-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiOutlinedInput-input"
+            placeholder="test"
+            type="email"
+            value="Test Value"
+          />
+          <fieldset
+            aria-hidden="true"
+            class="PrivateNotchedOutline-root-9 MuiOutlinedInput-notchedOutline"
+            style="padding-left: 8px;"
+          >
+            <legend
+              class="PrivateNotchedOutline-legend-10"
+              style="width: 0.01px;"
+            >
+              <span>
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Renders Input should render Input(tel) correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="form-control"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-adornedStart MuiOutlinedInput-adornedStart"
+          >
+            <div
+              class="MuiInputAdornment-root makeStyles-phoneCodeWrap-15 MuiInputAdornment-positionStart"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15 12h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3zm4 0h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7zm1 3.5c-1.25 0-2.45-.2-3.57-.57-.1-.03-.21-.05-.31-.05-.26 0-.51.1-.71.29l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM5.03 5h1.5c.07.88.22 1.75.45 2.58l-1.2 1.21c-.4-1.21-.66-2.47-.75-3.79zM19 18.97c-1.32-.09-2.6-.35-3.8-.76l1.2-1.2c.85.24 1.72.39 2.6.45v1.51z"
+                />
+              </svg>
+              <div
+                class="MuiFormControl-root"
+              >
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+                >
+                  <div
+                    aria-haspopup="listbox"
+                    aria-labelledby="code-select code-select"
+                    class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                    id="code-select"
+                    role="button"
+                    tabindex="0"
+                  >
+                    IN
+                     (
+                    +91
+                    )
+                  </div>
+                  <input
+                    aria-hidden="true"
+                    class="MuiSelect-nativeInput"
+                    tabindex="-1"
+                    value="+91"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSelect-icon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7 10l5 5 5-5z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiOutlinedInput-inputAdornedStart"
+              type="tel"
+              value="Test Value"
+            />
+            <fieldset
+              aria-hidden="true"
+              class="PrivateNotchedOutline-root-17 MuiOutlinedInput-notchedOutline"
+              style="padding-left: 8px;"
+            >
+              <legend
+                class="PrivateNotchedOutline-legend-18"
+                style="width: 0.01px;"
+              >
+                <span>
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="form-control"
+    >
+      <div
+        class="MuiFormControl-root MuiTextField-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-adornedStart MuiOutlinedInput-adornedStart"
+        >
+          <div
+            class="MuiInputAdornment-root makeStyles-phoneCodeWrap-15 MuiInputAdornment-positionStart"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M15 12h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3zm4 0h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7zm1 3.5c-1.25 0-2.45-.2-3.57-.57-.1-.03-.21-.05-.31-.05-.26 0-.51.1-.71.29l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM5.03 5h1.5c.07.88.22 1.75.45 2.58l-1.2 1.21c-.4-1.21-.66-2.47-.75-3.79zM19 18.97c-1.32-.09-2.6-.35-3.8-.76l1.2-1.2c.85.24 1.72.39 2.6.45v1.51z"
+              />
+            </svg>
+            <div
+              class="MuiFormControl-root"
+            >
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+              >
+                <div
+                  aria-haspopup="listbox"
+                  aria-labelledby="code-select code-select"
+                  class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                  id="code-select"
+                  role="button"
+                  tabindex="0"
+                >
+                  IN
+                   (
+                  +91
+                  )
+                </div>
+                <input
+                  aria-hidden="true"
+                  class="MuiSelect-nativeInput"
+                  tabindex="-1"
+                  value="+91"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSelect-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiOutlinedInput-inputAdornedStart"
+            type="tel"
+            value="Test Value"
+          />
+          <fieldset
+            aria-hidden="true"
+            class="PrivateNotchedOutline-root-17 MuiOutlinedInput-notchedOutline"
+            style="padding-left: 8px;"
+          >
+            <legend
+              class="PrivateNotchedOutline-legend-18"
+              style="width: 0.01px;"
+            >
+              <span>
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Renders Input should render Input(text) correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="form-control"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input"
+              placeholder="test"
+              type="text"
+              value="Test Value"
+            />
+            <fieldset
+              aria-hidden="true"
+              class="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              style="padding-left: 8px;"
+            >
+              <legend
+                class="PrivateNotchedOutline-legend-4"
+                style="width: 0.01px;"
+              >
+                <span>
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="form-control"
+    >
+      <div
+        class="MuiFormControl-root MuiTextField-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiOutlinedInput-input"
+            placeholder="test"
+            type="text"
+            value="Test Value"
+          />
+          <fieldset
+            aria-hidden="true"
+            class="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+            style="padding-left: 8px;"
+          >
+            <legend
+              class="PrivateNotchedOutline-legend-4"
+              style="width: 0.01px;"
+            >
+              <span>
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

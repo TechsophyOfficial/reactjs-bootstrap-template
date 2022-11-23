@@ -1,0 +1,1078 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Dashboard should render Dashboard correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MuiGrid-root MuiGrid-container"
+      >
+        <div
+          class="account-screen"
+          id="account-screen"
+          style="width: 100%;"
+        >
+          <div
+            class="content-menu"
+            id="content-menu"
+          >
+            <div
+              class="main-menu"
+              id="main-menu"
+            >
+              <ul>
+                <li
+                  class="menu-list-item"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                    data-tab="0"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="menu-label"
+                        data-tab="0"
+                      >
+                        Label
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </li>
+                <li
+                  class="menu-list-item"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                    data-tab="1"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="menu-label"
+                        data-tab="1"
+                      >
+                        Textarea
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </li>
+                <li
+                  class="menu-list-item"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                    data-tab="2"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="menu-label"
+                        data-tab="2"
+                      >
+                        Button
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </li>
+                <li
+                  class="menu-list-item"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                    data-tab="3"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="menu-label"
+                        data-tab="3"
+                      >
+                        Basic Tiles
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </li>
+                <li
+                  class="menu-list-item"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                    data-tab="4"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="menu-label"
+                        data-tab="4"
+                      >
+                        Radio
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </li>
+                <li
+                  class="menu-list-item"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                    data-tab="5"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="menu-label"
+                        data-tab="5"
+                      >
+                        Radio List
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </li>
+                <li
+                  class="menu-list-item"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                    data-tab="6"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="menu-label"
+                        data-tab="6"
+                      >
+                        Load Spinner
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </li>
+                <li
+                  class="menu-list-item"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                    data-tab="7"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="menu-label"
+                        data-tab="7"
+                      >
+                        Date Picker
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </li>
+                <li
+                  class="menu-list-item"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                    data-tab="8"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="menu-label"
+                        data-tab="8"
+                      >
+                        File Upload
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </li>
+                <li
+                  class="menu-list-item"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                    data-tab="9"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="menu-label"
+                        data-tab="9"
+                      >
+                        Toggle
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </li>
+                <li
+                  class="menu-list-item"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                    data-tab="10"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="menu-label"
+                        data-tab="10"
+                      >
+                        Popup Modal
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </li>
+                <li
+                  class="menu-list-item"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                    data-tab="11"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="menu-label"
+                        data-tab="11"
+                      >
+                        Select
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </li>
+                <li
+                  class="menu-list-item"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                    data-tab="12"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="menu-label"
+                        data-tab="12"
+                      >
+                        Select Box
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </li>
+                <li
+                  class="menu-list-item"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                    data-tab="13"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="menu-label"
+                        data-tab="13"
+                      >
+                        Check Box
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </li>
+                <li
+                  class="menu-list-item"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                    data-tab="14"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="menu-label"
+                        data-tab="14"
+                      >
+                        Check Box List
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="content-body"
+            id="content-body"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container"
+            >
+              <div
+                style="width: 100%;"
+              >
+                 
+                <div
+                  aria-labelledby="column-two-tabs-0"
+                  id="column-two-tabpanel-0"
+                  role="tabpanel"
+                  style="display: flex; justify-content: center; margin-top: 10px; padding: 0px 5px;"
+                >
+                  <div
+                    class="MuiBox-root MuiBox-root-2"
+                  >
+                    <p
+                      class="MuiTypography-root makeStyles-label-3 undefined MuiTypography-body1"
+                    >
+                      Label
+                       
+                      *
+                    </p>
+                  </div>
+                </div>
+                <div
+                  aria-labelledby="column-two-tabs-0"
+                  id="column-two-tabpanel-0"
+                  role="tabpanel"
+                  style="display: flex; justify-content: center; margin-top: 10px; padding: 0px 5px;"
+                >
+                  <div
+                    class="MuiBox-root MuiBox-root-4"
+                  >
+                    <p
+                      class="MuiTypography-root makeStyles-othersLabelStyles-1 undefined MuiTypography-body1"
+                    >
+                      Custom styled Label
+                       
+                      
+                    </p>
+                  </div>
+                </div>
+                <div
+                  aria-labelledby="column-two-tabs-0"
+                  id="column-two-tabpanel-0"
+                  role="tabpanel"
+                  style="display: flex; justify-content: center; margin-top: 10px; padding: 0px 5px;"
+                >
+                  <div
+                    class="MuiBox-root MuiBox-root-5"
+                  >
+                    <div>
+                      <ol
+                        style="font-weight: bold;"
+                      >
+                        <li>
+                          First import the component by placing below line into your file.
+                          <br />
+                          <ul>
+                            <em
+                              style="font-weight: normal;"
+                            >
+                              import Label from "../components/common/Label"
+                            </em>
+                          </ul>
+                        </li>
+                        <br />
+                        <li>
+                          Then use the component like below:
+                          <br />
+                          <ul
+                            style="font-weight: normal;"
+                          >
+                            <em>
+                              &lt;Label title='Label' required /&gt;
+                              <br />
+                              &lt;Label inputLabelStyles={classes.othersLabelStyles} title='Custom styled Label'/&gt;
+                            </em>
+                          </ul>
+                        </li>
+                        <br />
+                        <li>
+                          Pass the props value -
+                          <ul
+                            style="font-weight: normal;"
+                          >
+                            <li>
+                              <em>
+                                title
+                              </em>
+                               : pass the title value into this variable.
+                            </li>
+                            <li>
+                              optional props:
+                              <ul>
+                                <li>
+                                  <em>
+                                    inputLabelStyles
+                                  </em>
+                                   : custom style can be passed into this variable.
+                                </li>
+                                <li>
+                                  <em>
+                                    required/required=
+                                    {true}
+                                  </em>
+                                   : can be added in the label component in order to make it mandatory. (E.g. Label*)
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MuiGrid-root MuiGrid-container"
+    >
+      <div
+        class="account-screen"
+        id="account-screen"
+        style="width: 100%;"
+      >
+        <div
+          class="content-menu"
+          id="content-menu"
+        >
+          <div
+            class="main-menu"
+            id="main-menu"
+          >
+            <ul>
+              <li
+                class="menu-list-item"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                  data-tab="0"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="menu-label"
+                      data-tab="0"
+                    >
+                      Label
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </li>
+              <li
+                class="menu-list-item"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                  data-tab="1"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="menu-label"
+                      data-tab="1"
+                    >
+                      Textarea
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </li>
+              <li
+                class="menu-list-item"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                  data-tab="2"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="menu-label"
+                      data-tab="2"
+                    >
+                      Button
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </li>
+              <li
+                class="menu-list-item"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                  data-tab="3"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="menu-label"
+                      data-tab="3"
+                    >
+                      Basic Tiles
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </li>
+              <li
+                class="menu-list-item"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                  data-tab="4"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="menu-label"
+                      data-tab="4"
+                    >
+                      Radio
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </li>
+              <li
+                class="menu-list-item"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                  data-tab="5"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="menu-label"
+                      data-tab="5"
+                    >
+                      Radio List
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </li>
+              <li
+                class="menu-list-item"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                  data-tab="6"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="menu-label"
+                      data-tab="6"
+                    >
+                      Load Spinner
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </li>
+              <li
+                class="menu-list-item"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                  data-tab="7"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="menu-label"
+                      data-tab="7"
+                    >
+                      Date Picker
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </li>
+              <li
+                class="menu-list-item"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                  data-tab="8"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="menu-label"
+                      data-tab="8"
+                    >
+                      File Upload
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </li>
+              <li
+                class="menu-list-item"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                  data-tab="9"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="menu-label"
+                      data-tab="9"
+                    >
+                      Toggle
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </li>
+              <li
+                class="menu-list-item"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                  data-tab="10"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="menu-label"
+                      data-tab="10"
+                    >
+                      Popup Modal
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </li>
+              <li
+                class="menu-list-item"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                  data-tab="11"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="menu-label"
+                      data-tab="11"
+                    >
+                      Select
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </li>
+              <li
+                class="menu-list-item"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                  data-tab="12"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="menu-label"
+                      data-tab="12"
+                    >
+                      Select Box
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </li>
+              <li
+                class="menu-list-item"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                  data-tab="13"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="menu-label"
+                      data-tab="13"
+                    >
+                      Check Box
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </li>
+              <li
+                class="menu-list-item"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text"
+                  data-tab="14"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="menu-label"
+                      data-tab="14"
+                    >
+                      Check Box List
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="content-body"
+          id="content-body"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container"
+          >
+            <div
+              style="width: 100%;"
+            >
+               
+              <div
+                aria-labelledby="column-two-tabs-0"
+                id="column-two-tabpanel-0"
+                role="tabpanel"
+                style="display: flex; justify-content: center; margin-top: 10px; padding: 0px 5px;"
+              >
+                <div
+                  class="MuiBox-root MuiBox-root-2"
+                >
+                  <p
+                    class="MuiTypography-root makeStyles-label-3 undefined MuiTypography-body1"
+                  >
+                    Label
+                     
+                    *
+                  </p>
+                </div>
+              </div>
+              <div
+                aria-labelledby="column-two-tabs-0"
+                id="column-two-tabpanel-0"
+                role="tabpanel"
+                style="display: flex; justify-content: center; margin-top: 10px; padding: 0px 5px;"
+              >
+                <div
+                  class="MuiBox-root MuiBox-root-4"
+                >
+                  <p
+                    class="MuiTypography-root makeStyles-othersLabelStyles-1 undefined MuiTypography-body1"
+                  >
+                    Custom styled Label
+                     
+                    
+                  </p>
+                </div>
+              </div>
+              <div
+                aria-labelledby="column-two-tabs-0"
+                id="column-two-tabpanel-0"
+                role="tabpanel"
+                style="display: flex; justify-content: center; margin-top: 10px; padding: 0px 5px;"
+              >
+                <div
+                  class="MuiBox-root MuiBox-root-5"
+                >
+                  <div>
+                    <ol
+                      style="font-weight: bold;"
+                    >
+                      <li>
+                        First import the component by placing below line into your file.
+                        <br />
+                        <ul>
+                          <em
+                            style="font-weight: normal;"
+                          >
+                            import Label from "../components/common/Label"
+                          </em>
+                        </ul>
+                      </li>
+                      <br />
+                      <li>
+                        Then use the component like below:
+                        <br />
+                        <ul
+                          style="font-weight: normal;"
+                        >
+                          <em>
+                            &lt;Label title='Label' required /&gt;
+                            <br />
+                            &lt;Label inputLabelStyles={classes.othersLabelStyles} title='Custom styled Label'/&gt;
+                          </em>
+                        </ul>
+                      </li>
+                      <br />
+                      <li>
+                        Pass the props value -
+                        <ul
+                          style="font-weight: normal;"
+                        >
+                          <li>
+                            <em>
+                              title
+                            </em>
+                             : pass the title value into this variable.
+                          </li>
+                          <li>
+                            optional props:
+                            <ul>
+                              <li>
+                                <em>
+                                  inputLabelStyles
+                                </em>
+                                 : custom style can be passed into this variable.
+                              </li>
+                              <li>
+                                <em>
+                                  required/required=
+                                  {true}
+                                </em>
+                                 : can be added in the label component in order to make it mandatory. (E.g. Label*)
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+             
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

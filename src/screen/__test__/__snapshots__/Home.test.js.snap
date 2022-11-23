@@ -1,0 +1,214 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Home should render Home correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MuiGrid-root MuiGrid-container"
+        style="justify-content: flex-end; padding: 0px 30px;"
+      >
+        <div
+          class="content-body-div"
+          style="display: block; padding-left: 50px; width: 70%;"
+        >
+          <div
+            class="inner-page"
+          >
+            <p
+              style="font-size: 24px;"
+            >
+              Overview
+            </p>
+            <p>
+              Ready to use multi-lingual web application with all basic and necessary components, integrated with KeyCloak authentication, SxP and MUI styled components.
+            </p>
+            <p>
+              The main agenda of this templete project is to reduced the development time doing the same basic things for all web-application over and over.
+            </p>
+            <p>
+              This project will give you a skeleton of the base project where you don't have to start the development from the scratch.
+            </p>
+            <p
+              style="font-size: 24px;"
+            >
+              List of features
+            </p>
+            <p>
+              Below are the list of features we have implemented in this application.
+            </p>
+            <ul>
+              Header
+            </ul>
+            <ul>
+              Footer
+            </ul>
+            <ul>
+              Setting(to configure Language and country)
+            </ul>
+            <ul>
+              Profile(to Update the user details)
+            </ul>
+            <ul>
+              Basic UI components(Bootstrapped with MUI)
+            </ul>
+            <p>
+              Click "List of Component's Available" on the top right side of this page to see the list of UI components and how to use it in the application with example. 
+            </p>
+          </div>
+        </div>
+        <div>
+          <a
+            href="/component-list"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root makeStyles-root-1 MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label makeStyles-label-2"
+              >
+                
+                component_list_msg
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MuiGrid-root MuiGrid-container"
+      style="justify-content: flex-end; padding: 0px 30px;"
+    >
+      <div
+        class="content-body-div"
+        style="display: block; padding-left: 50px; width: 70%;"
+      >
+        <div
+          class="inner-page"
+        >
+          <p
+            style="font-size: 24px;"
+          >
+            Overview
+          </p>
+          <p>
+            Ready to use multi-lingual web application with all basic and necessary components, integrated with KeyCloak authentication, SxP and MUI styled components.
+          </p>
+          <p>
+            The main agenda of this templete project is to reduced the development time doing the same basic things for all web-application over and over.
+          </p>
+          <p>
+            This project will give you a skeleton of the base project where you don't have to start the development from the scratch.
+          </p>
+          <p
+            style="font-size: 24px;"
+          >
+            List of features
+          </p>
+          <p>
+            Below are the list of features we have implemented in this application.
+          </p>
+          <ul>
+            Header
+          </ul>
+          <ul>
+            Footer
+          </ul>
+          <ul>
+            Setting(to configure Language and country)
+          </ul>
+          <ul>
+            Profile(to Update the user details)
+          </ul>
+          <ul>
+            Basic UI components(Bootstrapped with MUI)
+          </ul>
+          <p>
+            Click "List of Component's Available" on the top right side of this page to see the list of UI components and how to use it in the application with example. 
+          </p>
+        </div>
+      </div>
+      <div>
+        <a
+          href="/component-list"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root makeStyles-root-1 MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label makeStyles-label-2"
+            >
+              
+              component_list_msg
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

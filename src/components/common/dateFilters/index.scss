@@ -1,0 +1,31 @@
+.buttonHolder {
+    flex-basis: 16.6%;
+    flex-shrink: 0;
+    padding: 6px;
+    box-sizing: border-box;
+
+    .MuiButtonBase-root {
+        margin: 0px;
+        width: 100%;
+    }
+
+    .MuiButton-containedSizeLarge {
+        padding: 8px 4px;
+    }
+
+    .MuiButton-label {
+        padding: 0px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .buttonHolder {
+        flex-basis: 33.3%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .buttonHolder {
+        flex-basis: 100%;
+    }
+}
