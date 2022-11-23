@@ -1,0 +1,126 @@
+.MuiAppBar-colorPrimary.header {
+    // background-color: transparent;
+    box-shadow: none;
+
+    &.notify-active {
+        top: 0px;
+    }
+}
+
+.header-msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header.shadow {
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
+
+.logo {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    // padding: 10px;
+}
+
+.menuButton {
+    font-weight: 700;
+    size: 18px;
+    margin-left: 38px;
+    color: #171723;
+}
+
+.toolbar {
+    display: flex;
+    // justifyContent: space-between;
+}
+
+.menuWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menusList {
+    display: flex;
+}
+
+.menuItemsList {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding-left: 15%;
+
+    a {
+        flex: 1;
+        color: #171723;
+        margin-left: 10px;
+        font-weight: 500;
+        font-size: 17px;
+        text-transform: capitalize;
+        text-decoration: none;
+        align-self: center;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+
+    a.active {
+        // text-decoration: underline;
+        border-bottom: 1px solid #025e5e;
+
+        color: #025e5e;
+    }
+
+    a:hover {
+        border-bottom: 1px solid #171723;
+    }
+}
+
+.menuItemsList2 {
+    flex: 2;
+    text-align: right;
+
+    #download-app-btn {
+        margin-right: 12px;
+        font-size: 13px;
+        font-weight: 700;
+        border-width: 3px;
+    }
+}
+
+.country-selection {
+    .MuiTypography-body1 {
+        top: 18px;
+        left: 18px;
+        position: absolute;
+        font-size: 9px;
+    }
+}
+
+.country-selection.false {
+    .MuiTypography-body1 {
+        right: 18px;
+        left: auto;
+    }
+}
+
+.MuiMenu-paper {
+    margin-top: 30px;
+}
+
+//media query
+@media only screen and (max-width: 1200px) {
+    .menuItemsList {
+        flex: 3;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .main-container-wrapper {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

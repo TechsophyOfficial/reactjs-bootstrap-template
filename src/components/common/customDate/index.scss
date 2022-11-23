@@ -1,0 +1,37 @@
+#cust-date-wrapper {
+    .MuiDialog-paper {
+        overflow-y: revert;
+    }
+
+    .MuiDialogTitle-root {
+        margin: 0;
+        padding: 16px 24px;
+        border-bottom: 0px solid #165e5e;
+        background: rgb(240, 247, 247);
+        color: #165e5e;
+        margin-bottom: 30px;
+        position: relative;
+
+        .MuiTypography-h6 {
+            padding-right: 35px;
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            right: 5px;
+            top: 10px;
+        }
+    }
+
+    .MuiDialogActions-spacing {
+        padding: 0px 20px 20px;
+    }
+
+    .react-datepicker__navigation--previous {
+        top: 8px;
+    }
+
+    .react-datepicker__navigation-icon--next {
+        top: 6px;
+    }
+}

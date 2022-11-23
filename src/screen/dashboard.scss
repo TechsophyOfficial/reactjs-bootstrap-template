@@ -1,0 +1,252 @@
+.account-screen {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 100%;
+}
+
+.content-menu {
+    max-width: 450px;
+    background-image: linear-gradient(to right, #d1e6e6 225px, #f0f7f7 225px);
+}
+
+.content-body {
+    flex-grow: 1;
+    max-width: calc(100% - 260px);
+    padding: 20px;
+}
+
+.collapse+.content-body {
+    max-width: calc(100% - 290px);
+}
+
+.sub-collapse+.content-body {
+    max-width: calc(100% - 295px);
+}
+
+.collapse.sub-collapse+.content-body {
+    max-width: calc(100% - 140px);
+}
+
+.side-menu-user-details {
+    max-width: 225px;
+}
+
+.sub-menu-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.main-menu {
+    width: 220px;
+    height: 100%;
+    // padding-top: 20px;
+    position: relative;
+    overflow: hidden;
+
+    ul {
+        padding: 0px;
+    }
+
+    .menu-list-item {
+        min-width: 20px;
+        /* color: #393c3c; */
+        display: flex;
+
+        .MuiButton-root {
+            border-radius: 0px;
+            width: 100%;
+            border-bottom: 1px solid #a7a7a7;
+            margin: 0 14px;
+            max-width: 197px;
+        }
+
+        .MuiButton-root:hover {
+            background-color: transparent;
+        }
+
+        .MuiButton-text {
+            padding: 16px 10px;
+        }
+
+        .MuiButton-label {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .menu-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 14px;
+            flex-shrink: 0;
+
+            svg {
+                fill: #656565;
+            }
+
+            &:hover {
+                svg {
+                    fill: #025e5e;
+                }
+            }
+
+            &.donationStatusImg {
+                width: 28px;
+                margin-right: 10px;
+            }
+
+            &.offlineDonationsImg {
+                width: 30px;
+                margin-right: 8px;
+            }
+
+            &.withdrawalsImg {
+                width: 27px;
+                margin-right: 12px;
+            }
+
+            &.donationsImg {
+                width: 25px;
+            }
+
+            &.keyboardImg {
+                width: 25px;
+            }
+        }
+
+        .menu-label {
+            text-align: left;
+            line-height: 18px;
+            white-space: nowrap;
+            font-size: 0.82rem;
+            transition: width 2s;
+            text-transform: capitalize;
+            font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+        }
+
+        .sub-menu-list {
+            width: 225px;
+
+            padding-top: 228px;
+            display: none;
+
+            .sub-list-item {
+                list-style: none;
+            }
+        }
+
+        &.active {
+            >.MuiButton-root {
+                border-color: #175f5e;
+                color: #175f5e;
+                font-weight: 600;
+
+                svg {
+                    fill: #025e5e;
+                    -webkit-filter: drop-shadow(4px 4px 2px rgba(34, 34, 34, 0.596078));
+                    filter: drop-shadow(4px 4px 2px rgba(34, 34, 34, 0.596078));
+                }
+            }
+
+            .sub-menu-list {
+                display: block;
+
+                .sub-list-item {
+                    &.active {
+                        >.MuiButton-root {
+                            border-color: #175f5e;
+                            color: #175f5e;
+                            font-weight: 600;
+
+                            svg {
+                                fill: #025e5e;
+                                -webkit-filter: drop-shadow(4px 4px 2px rgba(34, 34, 34, 0.596078));
+                                filter: drop-shadow(4px 4px 2px rgba(34, 34, 34, 0.596078));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.content-menu.sub-collapse {
+    .main-menu {
+        width: 295px;
+    }
+
+    .sub-menu-list {
+        width: 70px;
+
+        .MuiButton-root {
+            min-width: 20px;
+            width: 42px;
+
+            .menu-icon {
+                margin-right: 0px;
+            }
+
+            .menu-label {
+                width: 0;
+                height: 0;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.content-menu.collapse.sub-collapse {
+    background-image: linear-gradient(to right, #d1e6e6 70px, #f0f7f7 70px);
+
+    .main-menu {
+        width: 140px;
+
+        .sub-menu-list {
+            padding-top: 90px;
+            width: 70px;
+        }
+
+        .content-body {
+            transition: width 2s;
+            flex-grow: 1;
+            padding: 24px 0px;
+            max-width: calc(100% - 130px);
+        }
+    }
+}
+
+.content-menu.collapse {
+    background-image: linear-gradient(to right, #d1e6e6 70px, #f0f7f7 10px);
+
+    .side-menu-user-details {
+        max-width: 70px;
+        height: 54px;
+        overflow: hidden;
+    }
+
+    .main-menu {
+        width: 290px;
+
+        .menu-list-item {
+            >.MuiButton-root {
+                min-width: 20px;
+                width: 42px;
+
+                .menu-label {
+                    width: 0px;
+                    height: 0px;
+                    overflow: hidden;
+                }
+            }
+        }
+
+        .sub-menu-list {
+            padding-top: 90px;
+            width: 220px;
+        }
+    }
+}
