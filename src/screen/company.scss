@@ -1,0 +1,53 @@
+.page-heading {
+    display: flex;
+    align-items: center;
+}
+
+.page-company {
+    margin-right: 30px;
+    vertical-align: middle;
+    font-size: 48px;
+    color: #012653;
+}
+
+.page-sub {
+    font-size: 24px;
+    color: #012653;
+}
+
+.grey-text {
+    color: #999999;
+}
+
+.row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.achv {
+    width: 33%;
+}
+
+.achv-text {
+    color: #FD5429;
+}
+
+.achv-desc {
+    word-wrap: break-word;
+}
+
+.journey-row {
+    width: 36%;
+}
+
+.journey-label {
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.journey-list {
+    font-size: 12px;
+}
