@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { InputAdornment, makeStyles, IconButton } from "@material-ui/core";
+import { InputAdornment, IconButton } from "@mui/material";
 import "../../../index.scss";
 import Input from "./Input";
 import SIZE from "../../../theme/font_size.json";
@@ -9,8 +9,12 @@ import { MetaInfo } from "../../../types/types";
 import { useDispatch } from "react-redux";
 import { pushNotification, setLoader } from "../../../redux/actions";
 import DownloadIcon from "../../../assets/svg/Download_Primary.svg";
-import { downloadTemplateApi, uploadFileApi } from "../../../services/UploadFile";
+import {
+  downloadTemplateApi,
+  uploadFileApi,
+} from "../../../services/UploadFile";
 import CONSTANTS from "../../../constants/constants";
+import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
   uploadInput: {
@@ -223,6 +227,7 @@ const FileUpload = (props: UploadProps) => {
                   readOnly
                   className={classes.readOnlyInput}
                   onChange={onChangeValue}
+                  multiple
                 />
 
                 <IconButton>

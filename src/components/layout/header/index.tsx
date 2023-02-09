@@ -1,15 +1,15 @@
 import {
   AppBar,
   Button,
-  makeStyles,
   Menu,
   MenuItem,
   Toolbar,
   Typography,
-} from "@material-ui/core";
+} from "@mui/material";
 import augmentLogo from "../../../assets/icon/augment-logo.svg";
+import techsophyLogo from "../../../assets/icon/techsophy_logo.png";
 import avatar from "../../../assets/icon/avatar.png";
-import { Avatar } from "@material-ui/core";
+import { Avatar } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
 import "./style.scss";
 import { useNavigate } from "react-router-dom";
@@ -17,6 +17,7 @@ import { useKeycloak } from "@react-keycloak/web";
 import CONSTANTS from "../../../constants/constants";
 import { useTranslation } from "react-i18next";
 import COMMON from "../../../constants/common";
+import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
   userProfile: {
@@ -28,11 +29,11 @@ const Header = () => {
   //   prettier - ignore;
   const classes = useStyles();
   const notifyRef = useRef<any>();
-  const openNotify = true
+  const openNotify = true;
   const { keycloak } = useKeycloak();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-  const imageSrc = ""
+  const imageSrc = "";
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
   const { t } = useTranslation();
@@ -82,9 +83,7 @@ const Header = () => {
   const renderMessage = () => {
     return (
       <div className="header-msg">
-        <Typography variant="h5" >
-          {getMesssage()}
-        </Typography>
+        <Typography variant="h5">{getMesssage()}</Typography>
       </div>
     );
   };
@@ -110,9 +109,9 @@ const Header = () => {
       component="h1"
       className={"logo"}
       style={{ cursor: "pointer" }}
-      onClick={() => navigate('/')}
+      onClick={() => navigate("/")}
     >
-      <img width="50px" src={augmentLogo} alt={"brand logo"} />
+      <img width="100px" src={techsophyLogo} alt={"brand logo"} />
     </Typography>
   );
 
@@ -121,15 +120,13 @@ const Header = () => {
     keycloak.logout();
   };
 
-  const handleNavigation = (key) => navigate(key)
+  const handleNavigation = (key) => navigate(key);
 
   const renderUserProfileMenu = () => {
     return (
-      <div style={{ display: "flex", alignItems: 'center' }}>
-        <Typography >
-          {sessionStorage.getItem(CONSTANTS.USER_EMAIL)}
-        </Typography>
-        <span style={{ alignItems: 'center' }}>
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <Typography>{sessionStorage.getItem(CONSTANTS.USER_EMAIL)}</Typography>
+        <span style={{ alignItems: "center" }}>
           <Button
             className={classes.userProfile}
             aria-controls={open ? "basic-menu" : undefined}
@@ -140,10 +137,7 @@ const Header = () => {
             {!imageSrc && keycloak.authenticated ? (
               <Avatar />
             ) : imageSrc && keycloak.authenticated ? (
-              <img
-                alt={CONSTANTS.PROFILE}
-                src={avatar}
-              />
+              <img alt={CONSTANTS.PROFILE} src={avatar} />
             ) : (
               <Avatar />
             )}
@@ -160,20 +154,20 @@ const Header = () => {
           >
             {keycloak.authenticated ? (
               <>
-                <MenuItem onClick={() => handleNavigation('/my-profile')}>
+                <MenuItem onClick={() => handleNavigation("/my-profile")}>
                   <span>{t(CONSTANTS.PROFILE)}</span>
                 </MenuItem>
                 <MenuItem onClick={handleLogout}>
                   <span>{t(CONSTANTS.LOGOUT)}</span>
                 </MenuItem>
-                <MenuItem onClick={() => handleNavigation('/settings')}>
+                <MenuItem onClick={() => handleNavigation("/settings")}>
                   <span>{t(CONSTANTS.SETTINGS)}</span>
                 </MenuItem>
               </>
             ) : null}
           </Menu>
         </span>
-      </div >
+      </div>
     );
   };
 

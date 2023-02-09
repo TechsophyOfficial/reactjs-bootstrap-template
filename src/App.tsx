@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeProvider } from "@material-ui/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import { INITIAL_THEME } from "./theme";
 import Navigator from "./components/navigation/Navigator";
 import Wrapper from "./components/layout/wrapper";
@@ -59,7 +59,7 @@ const App = () => {
       <Provider store={store}>
         <Wrapper>
           <Navigator />
-          <LoadSxpChat />
+          {/* <LoadSxpChat /> */}
         </Wrapper>
       </Provider>
     </ThemeProvider>

@@ -1,7 +1,7 @@
 import React from "react";
-import { Switch, Typography } from "@material-ui/core";
+import { Switch, Typography } from "@mui/material";
 import { donationDetailsStyles } from "../styles/DonationDetailsStyles";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 interface Props {
   checked: boolean;
@@ -38,7 +38,11 @@ const Toggle = ({
         name={name}
         disabled={disabled}
       />
-      {label && <Typography className={labelStyle} style={{paddingLeft: 2}}>{t(label)}</Typography>}
+      {label && (
+        <Typography className={labelStyle} style={{ paddingLeft: 2 }}>
+          {t(label)}
+        </Typography>
+      )}
     </div>
   );
 };
