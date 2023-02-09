@@ -1,8 +1,8 @@
 import React from "react";
 import Popup from "reactjs-popup";
-import { Button } from "@material-ui/core";
-import { Close } from "@material-ui/icons";
-import { makeStyles } from "@material-ui/core/styles";
+import { Button } from "@mui/material";
+import { Close } from "@mui/icons-material";
+import { makeStyles } from "@mui/styles";
 
 import "reactjs-popup/dist/index.css";
 import Buttons from "./controls/Button";

@@ -1,7 +1,8 @@
 import React from "react";
 import ReactLoading from "react-loading";
-import { Backdrop, makeStyles } from "@material-ui/core";
+import { Backdrop } from "@mui/material";
 import COLORS from "../../theme/colors.json";
+import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(() => ({
   spinnerRoot: {

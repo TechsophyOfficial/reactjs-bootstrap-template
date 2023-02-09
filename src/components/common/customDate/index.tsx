@@ -10,9 +10,9 @@ import {
   DialogContent,
   DialogActions,
   IconButton,
-} from "@material-ui/core";
-import { Close } from "@material-ui/icons";
-import { useTranslation } from 'react-i18next';
+} from "@mui/material";
+import { Close } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 import CONSTANTS from "../../../constants/constants";
 
 interface CustomDateProps {
