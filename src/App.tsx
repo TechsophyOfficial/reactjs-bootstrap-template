@@ -1,98 +1,43 @@
-import React from "react";
-import { ThemeProvider } from "@mui/material/styles";
-import { ReactKeycloakProvider } from "@react-keycloak/web";
-import "./App.css";
-import RenderOnAuthenticated from "./RenderOnAuthenticated";
-import CONSTANTS from "./constants/constants";
-import Keycloak from "keycloak-js";
-import store from "./redux/Store";
-import { Provider } from "react-redux";
-import Header from "./pages/Header";
-import Wrapper from "./pages/Wrapper";
-import Navigation from "./Navigator";
-import { BrowserRouter as Router } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import KeycloakWrapper from "./KeycloakWrapper";
 
 const App = () => {
-  // !--------- KEYCLOAK CODE -------------
+  const [appConfig, setAppConfig] = useState<any>(null);
 
-  const keycloak = new Keycloak({
-    realm: `${process.env.REACT_APP_KEYCLOAK_REALM}`,
-    url: `${process.env.REACT_APP_KEYCLOAK_URL}auth/`,
-    clientId: `${process.env.REACT_APP_KEYCLOAK_CLIENT_ID}`,
-  });
-
-  const setTokens = (): void => {
-    const { token, refreshToken, idTokenParsed }: any = keycloak;
-
-    if (token && refreshToken && idTokenParsed) {
-      sessionStorage.setItem(CONSTANTS.USER_EMAIL, idTokenParsed.email);
-      sessionStorage.setItem(CONSTANTS.FIRST_NAME, idTokenParsed.given_name);
-      sessionStorage.setItem(CONSTANTS.LAST_NAME, idTokenParsed.family_name);
-      sessionStorage.setItem(CONSTANTS.USER_ID, idTokenParsed.sub);
-      sessionStorage.setItem(CONSTANTS.REACT_TOKEN, token);
-      sessionStorage.setItem(CONSTANTS.USER_TYPE, "user");
-    }
-  };
-  const refreshAccessToken = (): void => {
-    keycloak
-      .updateToken(50)
-      .then((refreshed: boolean) => {
-        if (refreshed) {
-          setTokens();
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        if (sessionStorage.getItem("react-token")) {
+          const config = {
+            realm: sessionStorage.getItem("realm") || "",
+            authURL: sessionStorage.getItem("authURL") || "",
+            clientId: sessionStorage.getItem("clientId") || "",
+            gatewayURL: sessionStorage.getItem("gatewayURL") || "",
+            logoURL: sessionStorage.getItem("logoURL") || "",
+          };
+          setAppConfig(config);
+        } else {
+          // Clear session storage
+          sessionStorage.clear();
+          const response = await fetch(`${window.location.origin}${window.location.pathname}.json`);
+          const config = await response.json();
+          setAppConfig(config);
         }
-      })
-      .catch(() => {
-        keycloak.logout();
-        sessionStorage.clear();
-      });
-  };
-
-  const handleEvent = (event: string): void => {
-    if (event === "onAuthSuccess") {
-      if (window.location.href.indexOf("signup") > -1) {
-        window.location.href = "/";
+      } catch (error) {
+        console.error("Error fetching configuration:", error);
       }
-      setTokens();
-    }
+    };
 
-    if (event === "onTokenExpired") {
-      refreshAccessToken();
-    }
-
-    if (event === "onAuthLogout") {
-      keycloak.logout();
-      sessionStorage.clear();
-    }
-    if (event === "OnAuthRefreshError") {
-      keycloak.logout();
-      sessionStorage.clear();
-    }
-  };
-
-  // END--------- KEYCLOAK CODE ------------- END
-
-  const getAppChildren = () => (
-    <Router>
-      <Provider store={store}>
-        <Wrapper>
-          <Navigation />
-        </Wrapper>
-      </Provider>
-    </Router>
-  );
+    fetchData();
+  }, []);
 
   return (
     <div>
-      <ReactKeycloakProvider
-        initOptions={{
-          onLoad: "login-required",
-          checkLoginIframe: false,
-        }}
-        authClient={keycloak}
-        onEvent={handleEvent}
-      >
-        <RenderOnAuthenticated>{getAppChildren()}</RenderOnAuthenticated>
-      </ReactKeycloakProvider>
+      {appConfig ? (
+        <KeycloakWrapper config={appConfig} />
+      ) : (
+        <div>Loading...</div>
+      )}
     </div>
   );
 };

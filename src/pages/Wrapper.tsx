@@ -1,16 +1,16 @@
 import * as React from "react";
-import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import Container from "@mui/material/Container";
 import { useAppDispatch, useAppSelector } from "../redux/Hook";
-import { useDispatch } from "react-redux";
 import Header from "./Header";
 import "../styles/Wrapper.css";
 import { StyledEngineProvider } from "@mui/material/styles";
 import Notification from "../components/Notification";
 import { initialAlertState } from "../redux/reducers/NotificationState";
+
+// We use the Material-UI (MUI) library for styling
 
 const Wrapper = (props: {
   children:
@@ -27,6 +27,7 @@ const Wrapper = (props: {
   const themeDataState = useAppSelector((state) => state.UpdateTheme);
   const notifyDataState = useAppSelector((state) => state.NotificationAlert);
 
+  // Function to reset notification data
   const resetNotificationData = () => {
     dispatch({
       type: "SEND_ALERT",
@@ -62,7 +63,7 @@ const Wrapper = (props: {
     },
   });
 
-  //End
+  //Apllication Theme End
 
   return (
     <StyledEngineProvider injectFirst>
@@ -75,8 +76,9 @@ const Wrapper = (props: {
           setOpen={() => resetNotificationData()}
         />
         <Box className="wrapper-container">
-          <CssBaseline />
-          <Header />
+          <CssBaseline />          
+          {/* Header Component provides consistent navigation or information across the application. */}
+          <Header /> 
 
           <Box
             component="main"
@@ -95,9 +97,12 @@ const Wrapper = (props: {
             </Box>
           </Box>
         </Box>
+        {/* <LoadSxpChat /> */}
       </ThemeProvider>
     </StyledEngineProvider>
   );
 };
 
 export default Wrapper;
+
+/* Control Flow: index -> App -> Wrapper */

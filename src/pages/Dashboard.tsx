@@ -5,3 +5,5 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
+/* Control Flow: index -> App -> Wrapper -> Header -> SideNav -> NavListItems(Dashboard) -> Dashboard */
