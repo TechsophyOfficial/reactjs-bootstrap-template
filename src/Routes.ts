@@ -30,4 +30,6 @@ export const routes: Array<Route> = [
     component: Test,
     index: 0,
   },
+
+  /* Add additional routes in Routes.ts as required following the above format: */
 ];

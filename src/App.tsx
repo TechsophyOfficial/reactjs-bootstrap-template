@@ -1,5 +1,4 @@
 import React from "react";
-import { ThemeProvider } from "@mui/material/styles";
 import { ReactKeycloakProvider } from "@react-keycloak/web";
 import "./App.css";
 import RenderOnAuthenticated from "./RenderOnAuthenticated";
@@ -7,7 +6,6 @@ import CONSTANTS from "./constants/constants";
 import Keycloak from "keycloak-js";
 import store from "./redux/Store";
 import { Provider } from "react-redux";
-import Header from "./pages/Header";
 import Wrapper from "./pages/Wrapper";
 import Navigation from "./Navigator";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -21,6 +19,7 @@ const App = () => {
     clientId: `${process.env.REACT_APP_KEYCLOAK_CLIENT_ID}`,
   });
 
+  // Function to set tokens in session storage
   const setTokens = (): void => {
     const { token, refreshToken, idTokenParsed }: any = keycloak;
 
@@ -33,6 +32,7 @@ const App = () => {
       sessionStorage.setItem(CONSTANTS.USER_TYPE, "user");
     }
   };
+  // Function to refresh access token
   const refreshAccessToken = (): void => {
     keycloak
       .updateToken(50)
@@ -47,8 +47,10 @@ const App = () => {
       });
   };
 
+  // Function to handle Keycloak events
   const handleEvent = (event: string): void => {
     if (event === "onAuthSuccess") {
+      // Redirect to home page after successful authentication
       if (window.location.href.indexOf("signup") > -1) {
         window.location.href = "/";
       }
@@ -59,11 +61,8 @@ const App = () => {
       refreshAccessToken();
     }
 
-    if (event === "onAuthLogout") {
-      keycloak.logout();
-      sessionStorage.clear();
-    }
-    if (event === "OnAuthRefreshError") {
+    if (event === "onAuthLogout" || event === "OnAuthRefreshError") {
+      // Logout and clear session storage on logout or refresh error
       keycloak.logout();
       sessionStorage.clear();
     }
@@ -71,15 +70,21 @@ const App = () => {
 
   // END--------- KEYCLOAK CODE ------------- END
 
+  // Function to return child components of the application
+
   const getAppChildren = () => (
     <Router>
       <Provider store={store}>
         <Wrapper>
+          {/* Wrapper component is used to wrap the navigation and provide additional layout such as Header.*/}
           <Navigation />
+          {/* Navigation component contains the routing structure of the application. */}
         </Wrapper>
       </Provider>
     </Router>
   );
+
+  //ReactKeycloakProvider is being used to provide authentication capabilities.
 
   return (
     <div>
@@ -96,5 +101,7 @@ const App = () => {
     </div>
   );
 };
+
+// RenderOnAuthenticated is a component that renders its children only when the user is authenticated.
 
 export default App;

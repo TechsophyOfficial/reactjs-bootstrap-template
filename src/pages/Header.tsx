@@ -6,9 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
@@ -16,15 +14,13 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { useAppSelector } from "../redux/Hook";
 import { useDispatch } from "react-redux";
 import { styled } from "@mui/material/styles";
-import LightLogo from "../assets/icons/techsophy_logo .png";
-import DarkLogo from "../assets/icons/Logo.svg";
 import UserLogo from "../assets/images/man.png";
 import SideNav from "./SideNav";
 import { useKeycloak } from "@react-keycloak/web";
-import Colors from "../utils/colors.json";
 import "../styles/Header.css";
 import { useLocation } from "react-router-dom";
 
+// Styled AppBar component to control drawer state
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
 })<AppBarProps>(({ theme, open }) => ({
@@ -102,6 +98,8 @@ function Header() {
           >
             <MenuIcon />
           </IconButton>
+
+          {/* Route name */}
           <Typography
             component="h1"
             variant="h6"
@@ -111,6 +109,8 @@ function Header() {
           >
             {routeName}
           </Typography>
+
+          {/* Theme toggle */}
           <Box>
             <IconButton onClick={handleThemeChange}>
               {themeDataState?.mode === "light" ? (
@@ -123,6 +123,8 @@ function Header() {
               )}
             </IconButton>
           </Box>
+
+          {/* User menu */}
           <Box className="header-user-box">
             <Tooltip title="Open settings">
               <IconButton
@@ -132,6 +134,8 @@ function Header() {
                 <Avatar alt="Remy Sharp" src={UserLogo} />
               </IconButton>
             </Tooltip>
+
+            {/* User menu items */}
             <Menu
               className="header-user-menu"
               id="menu-appbar"
@@ -158,8 +162,12 @@ function Header() {
           </Box>
         </Toolbar>
       </AppBar>
+
+      {/* SideNav component */}
       <SideNav open={open} toggleDrawer={toggleDrawer} />
     </>
   );
 }
 export default Header;
+
+/* Control Flow: index -> App -> Wrapper -> Header*/
