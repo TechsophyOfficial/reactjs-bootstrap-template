@@ -1,23 +1,26 @@
 {
-    "compilerOptions": {
-        "allowJs": true,
-        "esModuleInterop": true,
-        "isolatedModules": true,
-        "jsx": "react-jsx",
-        "lib": ["es6", "dom", "es2019"],
-        "module": "ESNext",
-        "moduleResolution": "node",
-        "strict": true,
-        "target": "esnext",
-        "skipLibCheck": true,
-        "resolveJsonModule": true,
-        "noImplicitAny": false,
-        "allowSyntheticDefaultImports": true,
-        "forceConsistentCasingInFileNames": true,
-        "noEmit": true,
-        "noFallthroughCasesInSwitch": true
-    },
-    "include": ["src"],
-    "exclude": ["node_modules", "babel.config.js", "metro.config.js", "gulpfile.js"]
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "src"
+  ]
 }
-

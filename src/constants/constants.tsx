@@ -11,11 +11,12 @@ const CONSTANTS = {
   SXP_SUBTITLE: "Service eXperience Platform",
   SXP_DEFAULT_MSG: "Hi, Welcome To React Template Project",
   VERSION_ID: "WORKING",
-  COULDNT_UPLOAD_DOC :"Could not upload Document",
+  COULDNT_UPLOAD_DOC: "Could not upload Document",
   SUCCESS: "success",
   ERROR: "error",
-  BUSINESS_USER : "business-user",
-  SELECT_START_END_DATE : "Select start date and end date",
+  WARNING: "warning",
+  BUSINESS_USER: "business-user",
+  SELECT_START_END_DATE: "Select start date and end date",
   USER_EMAIL: "user-email",
   FIRST_NAME: "first-name",
   LAST_NAME: "last-name",
@@ -23,7 +24,7 @@ const CONSTANTS = {
   REACT_TOKEN: "react-token",
   USER_TYPE: "user-type",
   COUNTRY: "country",
-  I18NEXTLNG : "i18nextLng"
+  I18NEXTLNG: "i18nextLng",
 };
 
 export default CONSTANTS;

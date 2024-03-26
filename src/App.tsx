@@ -1,19 +1,29 @@
 import React from "react";
 import { ThemeProvider } from "@mui/material/styles";
-import { INITIAL_THEME } from "./theme";
-import Navigator from "./components/navigation/Navigator";
-import Wrapper from "./components/layout/wrapper";
-import keycloak from "./keycloak";
 import { ReactKeycloakProvider } from "@react-keycloak/web";
-import RenderOnAuthenticated from "./components/RenderOnAuthenticated";
-import { Provider } from "react-redux";
-import { store } from "./redux/store";
-import LoadSxpChat from "./components/chatWidget";
+import "./App.css";
+import RenderOnAuthenticated from "./RenderOnAuthenticated";
 import CONSTANTS from "./constants/constants";
+import Keycloak from "keycloak-js";
+import store from "./redux/Store";
+import { Provider } from "react-redux";
+import Header from "./pages/Header";
+import Wrapper from "./pages/Wrapper";
+import Navigation from "./Navigator";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const App = () => {
+  // !--------- KEYCLOAK CODE -------------
+
+  const keycloak = new Keycloak({
+    realm: `${process.env.REACT_APP_KEYCLOAK_REALM}`,
+    url: `${process.env.REACT_APP_KEYCLOAK_URL}auth/`,
+    clientId: `${process.env.REACT_APP_KEYCLOAK_CLIENT_ID}`,
+  });
+
   const setTokens = (): void => {
-    const { token, refreshToken, idTokenParsed } = keycloak;
+    const { token, refreshToken, idTokenParsed }: any = keycloak;
+
     if (token && refreshToken && idTokenParsed) {
       sessionStorage.setItem(CONSTANTS.USER_EMAIL, idTokenParsed.email);
       sessionStorage.setItem(CONSTANTS.FIRST_NAME, idTokenParsed.given_name);
@@ -26,14 +36,14 @@ const App = () => {
   const refreshAccessToken = (): void => {
     keycloak
       .updateToken(50)
-      .success((refreshed: boolean) => {
+      .then((refreshed: boolean) => {
         if (refreshed) {
           setTokens();
         }
       })
-      .error(() => {
-        sessionStorage.clear();
+      .catch(() => {
         keycloak.logout();
+        sessionStorage.clear();
       });
   };
 
@@ -50,23 +60,29 @@ const App = () => {
     }
 
     if (event === "onAuthLogout") {
+      keycloak.logout();
+      sessionStorage.clear();
+    }
+    if (event === "OnAuthRefreshError") {
+      keycloak.logout();
       sessionStorage.clear();
     }
   };
 
+  // END--------- KEYCLOAK CODE ------------- END
+
   const getAppChildren = () => (
-    <ThemeProvider theme={INITIAL_THEME}>
+    <Router>
       <Provider store={store}>
         <Wrapper>
-          <Navigator />
-          {/* <LoadSxpChat /> */}
+          <Navigation />
         </Wrapper>
       </Provider>
-    </ThemeProvider>
+    </Router>
   );
 
   return (
-    <div className="app-wrapper">
+    <div>
       <ReactKeycloakProvider
         initOptions={{
           onLoad: "login-required",

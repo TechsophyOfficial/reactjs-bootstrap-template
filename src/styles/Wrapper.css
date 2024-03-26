@@ -1,0 +1,15 @@
+@import "./Colors.css";
+
+.wrapper-container {
+  display: flex;
+}
+
+.content-box-container {
+  padding: 0 1% 0 1%;
+}
+
+.custom-background {
+  flex-grow: 1;
+  height: 100vh;
+  overflow: auto;
+}
