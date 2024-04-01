@@ -10,26 +10,13 @@ The main agenda of this template project is to reduce development time by provid
 
 This project uses Keycloak for Identity and Access Management.
 
-## List of Features
+## Available Scripts
 
-Below is the list of features implemented in this application:
+In the project directory, you can run:
 
-- Header
-- SideNav
-- Theme
-- Profile
+### `npm install` || `yarn install`
 
-The Header contains a SideNav, Theme, and Profile. The Theme icon, when clicked, can change the theme of the application (it toggles between dark and light mode for this application). The SideNav contains a list of pages, and clicking on each page will navigate to that component.
-
-## Customizations
-
-The `Navigator.tsx` file in `src` contains all routing for this application. The routes are defined in the `Routes.ts` file in `src`, and you can add any routes to this file.
-
-The `pages` folder in `src` contains all UI components for this application. You can add your own components to this folder.
-
-## Redux Integrated
-
-`Redux Toolkit` is integrated into this project to manage global state. The `redux` folder in `src` contains all Redux-related files, including actions, reducers, and store configuration. You can add additional reducers and actions as needed for your application's state management.
+Install node Modules.
 
 ## Setting up `.env` file
 
@@ -38,20 +25,19 @@ Copy the content below and create a new file named `.env` in the root directory 
 ```plaintext
 # .env file
 
+# Keycloak URL: The URL where your Keycloak authentication server is hosted.
 REACT_APP_KEYCLOAK_URL={Keycloak URL}
+
+# Realm: The realm within your Keycloak server where your application is configured.
 REACT_APP_KEYCLOAK_REALM={Realm}
+
+# Client ID: The unique identifier for your application registered in Keycloak.
 REACT_APP_KEYCLOAK_CLIENT_ID={Client ID}
+
+# Gateway URL: The URL of your API gateway, which may handle authentication and routing requests to your backend services.
 REACT_APP_API_GATEWAY_URL={Gateway URL}
 
 ```
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm install` || `yarn install`
-
-Install node Modules.
 
 ### `npm start` || `yarn start`
 
@@ -79,6 +65,27 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc.) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point, you’re on your own.
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However, we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## List of Features
+
+Below is the list of features implemented in this application:
+
+- Header
+- SideNav
+- Theme
+- Profile
+
+The Header contains a SideNav, Theme, and Profile. The Theme icon, when clicked, can change the theme of the application (it toggles between dark and light mode for this application). The SideNav contains a list of pages, and clicking on each page will navigate to that component.
+
+## Customizations
+
+The `Navigator.tsx` file in `src` contains all routing for this application. The routes are defined in the `Routes.ts` file in `src`, and you can add any routes to this file.
+
+The `pages` folder in `src` contains all UI components for this application. You can add your own components to this folder.
+
+## Redux Integrated
+
+`Redux Toolkit` is integrated into this project to manage global state. The `redux` folder in `src` contains all Redux-related files, including actions, reducers, and store configuration. You can add additional reducers and actions as needed for your application's state management.
 
 ## Issues
 
