@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Prerequisites
+
+Before using, ensure you have the following prerequisites:
+
+- node.js version 20 or higherCheck by using `node --version` in the terminal or CMD. If it's not version 20, switch to version 20 using NVM.
+
 ## Overview
 
 Ready-to-use web app with all basic and necessary components integrated with KeyCloak authentication, SxP, and MUI styled components.
@@ -10,35 +16,23 @@ The main agenda of this template project is to reduce development time by provid
 
 This project uses Keycloak for Identity and Access Management.
 
-## List of Features
-
-Below is the list of features implemented in this application:
-
-- Header
-- SideNav
-- Theme
-- Profile
-
-The Header contains a SideNav, Theme, and Profile. The Theme icon, when clicked, can change the theme of the application (it toggles between dark and light mode for this application). The SideNav contains a list of pages, and clicking on each page will navigate to that component.
-
-## Customizations
-
-The `Navigator.tsx` file in `src` contains all routing for this application. The routes are defined in the `Routes.ts` file in `src`, and you can add any routes to this file.
-
-The `pages` folder in `src` contains all UI components for this application. You can add your own components to this folder.
-
-## Redux Integration
-
-`Redux Toolkit` is integrated into this project to manage global state. The `redux` folder in `src` contains all Redux-related files, including actions, reducers, and store configuration. You can add additional reducers and actions as needed for your application's state management.
-
-
 ## Multitenancy Setup
 
-### Public URL Configuration
-Ensure that your server is configured to handle public URLs. This is crucial for the multitenancy system to differentiate between tenants based on the URL.
+ In App.tsx
 
+  Instead of using `window.location.origin` to fetch the realm JSON, we need to provide the gatewayUrl from the retrieved JSON. This ensures that the    application fetches the realm information from the correct gateway URL specified in the JSON response.
+
+### Public URL Configuration
+
+Ensure that your server is configured to handle public URLs. This is crucial for the multitenancy system to differentiate between tenants based on the URL. You can specify the public URL in the `.env` file using the variable `PUBLIC_URL`. For example, if your application is hosted under a specific product name such as `/productname`, you can add the following line to your `.env` file:
+
+```plaintext
+PUBLIC_URL=/productname
+```
 ### Pathname Parameters
+
 Utilize `window.location.pathname` parameters to provide additional context for tenant identification. These parameters can help specify a particular resource or functionality within a tenant's scope.
+
 
 ## Available Scripts
 
@@ -74,6 +68,28 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc.) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point, you’re on your own.
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However, we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+
+## List of Features
+
+Below is the list of features implemented in this application:
+
+- Header
+- SideNav
+- Theme
+- Profile
+
+The Header contains a SideNav, Theme, and Profile. The Theme icon, when clicked, can change the theme of the application (it toggles between dark and light mode for this application). The SideNav contains a list of pages, and clicking on each page will navigate to that component.
+
+## Customizations
+
+The `Navigator.tsx` file in `src` contains all routing for this application. The routes are defined in the `Routes.ts` file in `src`, and you can add any routes to this file.
+
+The `pages` folder in `src` contains all UI components for this application. You can add your own components to this folder.
+
+## Redux Integration
+
+`Redux Toolkit` is integrated into this project to manage global state. The `redux` folder in `src` contains all Redux-related files, including actions, reducers, and store configuration. You can add additional reducers and actions as needed for your application's state management.
 
 ## Issues
 If you encounter any issues or have suggestions for improvements, please open an issue on the [GitHub repository](https://github.com/TechsophyOfficial/reactjs-bootstrap-template/tree/multiTenant).
