@@ -10,6 +10,13 @@ The main agenda of this template project is to reduce development time by provid
 
 This project uses Keycloak for Identity and Access Management.
 
+## Prerequisites
+
+Before using, ensure you have the following prerequisites:
+
+- node.js version 20 or higherCheck by using `node --version` in the terminal or CMD. If it's not version 20, switch to version 20 using NVM.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
