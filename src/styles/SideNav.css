@@ -1,8 +1,0 @@
-.header-toolbar-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding-left: 8px; /* Assuming px: [1] corresponds to padding-left: 8px */
-  padding-right: 8px; /* Assuming px: [1] corresponds to padding-right: 8px */
-  min-height: 48px;
-}

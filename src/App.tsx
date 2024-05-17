@@ -9,6 +9,8 @@ import { Provider } from "react-redux";
 import Wrapper from "./pages/Wrapper";
 import Navigation from "./Navigator";
 import { BrowserRouter as Router } from "react-router-dom";
+import { ThemeProvider } from "@emotion/react";
+
 
 const App = () => {
   // !--------- KEYCLOAK CODE -------------
@@ -74,13 +76,15 @@ const App = () => {
 
   const getAppChildren = () => (
     <Router>
-      <Provider store={store}>
-        <Wrapper>
-          {/* Wrapper component is used to wrap the navigation and provide additional layout such as Header.*/}
-          <Navigation />
-          {/* Navigation component contains the routing structure of the application. */}
-        </Wrapper>
-      </Provider>
+      {/* <ThemeProvider theme={INITIAL_THEME}> */}
+        <Provider store={store}>
+          <Wrapper>
+            {/* Wrapper component is used to wrap the navigation and provide additional layout such as Header.*/}
+            <Navigation />
+            {/* Navigation component contains the routing structure of the application. */}
+          </Wrapper>
+        </Provider>
+      {/* </ThemeProvider> */}
     </Router>
   );
 

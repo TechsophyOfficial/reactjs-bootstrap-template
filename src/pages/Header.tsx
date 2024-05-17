@@ -17,8 +17,10 @@ import { styled } from "@mui/material/styles";
 import UserLogo from "../assets/images/man.png";
 import SideNav from "./SideNav";
 import { useKeycloak } from "@react-keycloak/web";
-import "../styles/Header.css";
+import useCustomStyles from "../hooks/CustomStylesHook";
+// import "../styles/Header.css";
 import { useLocation } from "react-router-dom";
+import { useTheme } from "@emotion/react";
 
 // Styled AppBar component to control drawer state
 const AppBar = styled(MuiAppBar, {
@@ -44,9 +46,47 @@ const drawerWidth: number = 240;
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
 }
+const styles=(theme:any)=>({
+  pageTitle: {
+    textTransform: "capitalize",
+  },
+  headerToolbar: {
+    minHeight: 48,
+    paddingRight: 24,
+  },
+  headerIconButton: {
+    marginRight: 36,
+  },
+  hidden: {
+    display: "none",
+  },
+  headerTypography: {
+    flexGrow: 1,
+    textTransform: "capitalize",
+  },
+  headerThemeButton: {
+    color: theme.palette.common.white, // Use theme's palette for consistent colors
+  },
+  headerUserBox: {
+    flexGrow: 0,
+  },
+  headerUserButton: {
+    padding: 0,
+  },
+  headerAvatar: {
+    width: 32,
+    height: 32,
+  },
+  headerUserMenu: {
+    marginTop: 45,
+  },
+});
 
 function Header() {
   const themeDataState = useAppSelector((state) => state.UpdateTheme);
+  const theme= useTheme();
+  const classes = useCustomStyles(styles, theme);
+
   const { keycloak } = useKeycloak();
   const location = useLocation();
   const routeName = location.pathname.split("/").pop(); // Assuming the last part of the path is the route name
@@ -88,13 +128,13 @@ function Header() {
   return (
     <>
       <AppBar position="absolute" open={open}>
-        <Toolbar className="header-toolbar">
+        <Toolbar className={classes?.headerToolbar}>
           <IconButton
             edge="start"
             color="inherit"
             aria-label="open drawer"
             onClick={toggleDrawer}
-            className={`header-icon-button ${open ? "hidden" : ""}`}
+            className={`${classes?.headerIconButton} ${open ? classes?.hidden : ""}`}
           >
             <MenuIcon />
           </IconButton>
@@ -105,7 +145,7 @@ function Header() {
             variant="h6"
             color="inherit"
             noWrap
-            className="header-typography"
+            className={classes?.headerTypography}
           >
             {routeName}
           </Typography>
@@ -116,7 +156,7 @@ function Header() {
               {themeDataState?.mode === "light" ? (
                 <DarkModeOutlinedIcon
                   fontSize="small"
-                  className="header-darkmode-outlined-icon"
+                  className={classes?.headerDarkmodeOutlinedIcon}
                 />
               ) : (
                 <DarkModeIcon fontSize="small" />
@@ -125,11 +165,11 @@ function Header() {
           </Box>
 
           {/* User menu */}
-          <Box className="header-user-box">
+          <Box className={classes?.headerUserBox}>
             <Tooltip title="Open settings">
               <IconButton
                 onClick={handleOpenUserMenu}
-                className="header-user-button"
+                className={classes?.headerUserButton}
               >
                 <Avatar alt="Remy Sharp" src={UserLogo} />
               </IconButton>
@@ -137,7 +177,7 @@ function Header() {
 
             {/* User menu items */}
             <Menu
-              className="header-user-menu"
+              className={classes?.headerUserMenu}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{

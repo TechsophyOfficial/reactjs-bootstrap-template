@@ -10,8 +10,7 @@ import { NavListItems } from "./NavListItems";
 import LightLogo from "../assets/icons/techsophy_logo .png";
 import DarkLogo from "../assets/icons/Logo.svg";
 import { useTheme } from "@mui/material";
-import "../styles/SideNav.css";
-
+import useCustomStyles from "../hooks/CustomStylesHook";
 const drawerWidth: number = 240;
 
 // Styled component for customizing the Drawer component from Material-UI
@@ -47,14 +46,26 @@ interface NavProps {
   toggleDrawer: () => void;
 }
 
+const styles=(theme:any)=>({
+  headerToolbarContainer: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-around",
+    paddingLeft: theme.spacing(1) * 8,
+    paddingRight: theme.spacing(1) * 8,
+    minHeight: 48,
+  },
+});
+
 const SideNav = ({ open, toggleDrawer }: NavProps) => {
   const theme = useTheme();
+  const classes = useCustomStyles(styles, theme);
   return (
     /* 
   Drawer component toggles visibility based on the 'open' state and contains a toolbar and list of navigation items.
 */
     <Drawer variant="permanent" open={open}>
-      <Toolbar className="header-toolbar-container">
+      <Toolbar className={classes?.headerToolbarContainer}>
         <img
           src={theme.palette.mode === "dark" ? DarkLogo : LightLogo}
           alt="comapny-logo"

@@ -5,13 +5,28 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import { useAppDispatch, useAppSelector } from "../redux/Hook";
 import Header from "./Header";
-import "../styles/Wrapper.css";
 import { StyledEngineProvider } from "@mui/material/styles";
 import Notification from "../components/Notification";
 import { initialAlertState } from "../redux/reducers/NotificationState";
 import LoadSxpChat from "../components/chatWidget";
-
+import useCustomStyles from "../hooks/CustomStylesHook";
+import { useTheme } from "@emotion/react";
 // We use the Material-UI (MUI) library for styling
+
+const styles = (theme: any)=>({
+  wrapperContainer: {
+    display: "flex",
+  },
+  contentBoxContainer: {
+    padding: "0 1% 0 1%",
+  },
+  customBackground: {
+    flexGrow: 1,
+    height: "100vh",
+    overflow: "auto",
+  },
+});
+
 
 const Wrapper = (props: {
   children:
@@ -64,7 +79,8 @@ const Wrapper = (props: {
     },
   });
 
-  //Apllication Theme End
+  // Apllication Theme End
+  const classes= useCustomStyles(styles,theme);
 
   return (
     <StyledEngineProvider injectFirst>
@@ -76,14 +92,14 @@ const Wrapper = (props: {
           duration={notifyDataState.duration}
           setOpen={() => resetNotificationData()}
         />
-        <Box className="wrapper-container">
+        <Box className={classes?.wrapperContainer}>
           <CssBaseline />
           {/* Header Component provides consistent navigation or information across the application. */}
           <Header />
 
           <Box
             component="main"
-            className="custom-background"
+            className={classes?.customBackground}
             sx={{
               backgroundColor: (theme) =>
                 theme.palette.mode === "light"
@@ -92,14 +108,14 @@ const Wrapper = (props: {
             }}
           >
             <Toolbar />
-            <Box className="content-box-container">
+            <Box className={classes?.contentBoxContainer}>
               {props.children}
               {/* <Copyright sx={{ pt: 4 }} /> */}
             </Box>
           </Box>
         </Box>
         {/* <LoadSxpChat /> */}
-      </ThemeProvider>
+        </ThemeProvider>
     </StyledEngineProvider>
   );
 };
