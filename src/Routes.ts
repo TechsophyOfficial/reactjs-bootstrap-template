@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import Test from "./pages/Test";
+import Test from "./pages/PlaceHolder";
 import Dashboard from "./pages/Dashboard";
 
 interface Route {
@@ -7,9 +7,8 @@ interface Route {
   title: string;
   path: string;
   enabled: boolean;
-  component: FC<{}>;
+  component: FC;
   index: number;
-  //   icon: FC<{}>;
 }
 
 export const routes: Array<Route> = [
@@ -23,13 +22,11 @@ export const routes: Array<Route> = [
   },
 
   {
-    key: "test",
-    title: "Test",
-    path: `${process.env.PUBLIC_URL}/test`,
+    key: "placeholder",
+    title: "Placeholder",
+    path: `${process.env.PUBLIC_URL}/placeholder`,
     enabled: true,
     component: Test,
     index: 0,
   },
-
-  /* Add additional routes in Routes.ts as required following the above format: */
 ];

@@ -1,15 +1,22 @@
 import React, { useEffect } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
 import { routes as appRoutes } from "./Routes";
 
 const Navigation = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   // Set the initial route to the dashboard component when the component mounts
   useEffect(() => {
-    navigate(`${process.env.PUBLIC_URL}/dashboard`);
-  }, []);
+    if (
+      location.pathname === `${process.env.PUBLIC_URL}/` ||
+      location.pathname === `${process.env.PUBLIC_URL}`
+    ) {
+      navigate(`${process.env.PUBLIC_URL}/dashboard`);
+    }
 
+    // navigate(`${process.env.PUBLIC_URL}/dashboard`);
+  }, []);
 
   return (
     <>
@@ -20,7 +27,6 @@ const Navigation = () => {
             path={route.path}
             element={<route.component />}
           />
-          // Add additional routes in Routes.ts as required.
         ))}
       </Routes>
     </>

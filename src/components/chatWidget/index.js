@@ -1,59 +1,59 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import CONSTANTS from "../../constants/constants";
 import "./index.css";
 
-class LoadSxpChat extends Component {
-  state = {
-    userToken: "",
-  };
-
-  componentDidMount() {
-    this.getUserToken();
-  }
-
-  getUserToken = () => {
+const LoadSxpChat = () => {
+  useEffect(() => {
     const token = sessionStorage.getItem(CONSTANTS.REACT_TOKEN);
-    this.setState({ userToken: token }, this.loadIt);
-  };
+    if (token) {
+      loadIt(token);
+    } else {
+      console.error("User token not found in session storage");
+    }
+  }, []);
 
-  loadIt = () => {
+  const loadIt = (token) => {
     const {
       REACT_APP_SOCKET_URL,
       REACT_APP_SOCKET_PATH,
       REACT_APP_GET_SXP_PROJECT_ID,
       REACT_APP_CHAT_FILE_SERVER_URL,
-      SXP_TITLE,
-      SXP_SUBTITLE,
-      SXP_DEFAULT_MSG,
-      VERSION_ID,
     } = process.env;
 
     const mainObj = {
       socketUrl: REACT_APP_SOCKET_URL,
       socketPath: REACT_APP_SOCKET_PATH,
       SSL: true,
-      accessToken: `Bearer ${this.state.userToken}`,
+      accessToken: `Bearer ${token}`,
       currentProject: REACT_APP_GET_SXP_PROJECT_ID,
       fileServerUrl: REACT_APP_CHAT_FILE_SERVER_URL,
-      mainTitle: SXP_TITLE,
-      subTitle: SXP_SUBTITLE,
+      mainTitle: CONSTANTS.MESSAGES.SXP_TITLE,
+      subTitle: CONSTANTS.MESSAGES.SXP_SUBTITLE,
       chatRefresh: true,
       autoLaunch: false,
       lazyAutoLaunch: false,
       editChat: false,
       uploadDoc: true,
-      defaultMessage: SXP_DEFAULT_MSG,
+      defaultMessage: CONSTANTS.MESSAGES.SXP_DEFAULT_MSG,
       languages: [],
-      version: VERSION_ID,
+      version: CONSTANTS.SETTINGS.VERSION_ID,
       journeyTray: false,
     };
+
+    if (
+      !REACT_APP_SOCKET_URL ||
+      !REACT_APP_SOCKET_PATH ||
+      !REACT_APP_GET_SXP_PROJECT_ID ||
+      !REACT_APP_CHAT_FILE_SERVER_URL
+    ) {
+      console.error("Missing required environment variables for chat widget");
+      return;
+    }
 
     window.embedSXPChat(mainObj);
   };
 
-  render() {
-    return null;
-  }
-}
+  return null;
+};
 
 export default LoadSxpChat;

@@ -6,14 +6,12 @@ import Toolbar from "@mui/material/Toolbar";
 import { useAppDispatch, useAppSelector } from "../redux/Hook";
 import Header from "./Header";
 import { StyledEngineProvider } from "@mui/material/styles";
-import Notification from "../components/Notification";
-import { initialAlertState } from "../redux/reducers/NotificationState";
 import LoadSxpChat from "../components/chatWidget";
 import useCustomStyles from "../hooks/CustomStylesHook";
-import { useTheme } from "@emotion/react";
+import { Theme } from "@mui/material/styles";
 // We use the Material-UI (MUI) library for styling
 
-const styles = (theme: any)=>({
+const styles = (theme: Theme) => ({
   wrapperContainer: {
     display: "flex",
   },
@@ -27,7 +25,6 @@ const styles = (theme: any)=>({
   },
 });
 
-
 const Wrapper = (props: {
   children:
     | string
@@ -39,24 +36,7 @@ const Wrapper = (props: {
     | null
     | undefined;
 }) => {
-  const dispatch = useAppDispatch();
-  const themeDataState = useAppSelector((state) => state.UpdateTheme);
-  const notifyDataState = useAppSelector((state) => state.NotificationAlert);
-
-  // Function to reset notification data
-  const resetNotificationData = () => {
-    dispatch({
-      type: "SEND_ALERT",
-      data: {
-        enable: initialAlertState.enable,
-        type: initialAlertState.type,
-        message: initialAlertState.message,
-        duration: initialAlertState.duration,
-      },
-    });
-  };
-
-  // Application Theme
+  const themeDataState = useAppSelector((state) => state.updateTheme);
 
   const theme = createTheme({
     palette: {
@@ -80,21 +60,13 @@ const Wrapper = (props: {
   });
 
   // Apllication Theme End
-  const classes= useCustomStyles(styles,theme);
+  const classes = useCustomStyles(styles, theme);
 
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
-        <Notification
-          open={notifyDataState.enable}
-          type={notifyDataState.type}
-          message={notifyDataState.message}
-          duration={notifyDataState.duration}
-          setOpen={() => resetNotificationData()}
-        />
         <Box className={classes?.wrapperContainer}>
           <CssBaseline />
-          {/* Header Component provides consistent navigation or information across the application. */}
           <Header />
 
           <Box
@@ -108,14 +80,12 @@ const Wrapper = (props: {
             }}
           >
             <Toolbar />
-            <Box className={classes?.contentBoxContainer}>
-              {props.children}
-              {/* <Copyright sx={{ pt: 4 }} /> */}
-            </Box>
+            <Box className={classes?.contentBoxContainer}>{props.children}</Box>
           </Box>
         </Box>
-        {/* <LoadSxpChat /> */}
-        </ThemeProvider>
+        {/* TODO: Uncomment and implement the Chat-bot functionality when required */}
+        <LoadSxpChat />
+      </ThemeProvider>
     </StyledEngineProvider>
   );
 };

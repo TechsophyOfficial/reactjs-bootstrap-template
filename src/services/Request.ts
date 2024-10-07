@@ -8,7 +8,7 @@ export interface ResponseProps {
   message?: string;
 }
 
-type ApiResponse = unknown;
+type ApiResponse = ResponseProps;
 
 const callAPI = async (w: ResponseChain): Promise<ApiResponse> => {
   return w
@@ -20,12 +20,19 @@ const callAPI = async (w: ResponseChain): Promise<ApiResponse> => {
       };
     })
     .internalError((error) => {
-      const { message } = JSON.parse(error.message);
+      let message = "Internal server error";
+      try {
+        const parsedError = JSON.parse(error.message);
+        message = parsedError.message || message;
+      } catch (e) {
+        console.error("Failed to parse error message:", e);
+      }
       return {
         success: false,
         message: message,
       };
     })
+
     .json((response) => response)
     .catch((error) => {
       console.log(error);
@@ -57,18 +64,14 @@ const callBlobAPI = async (wr: ResponseChain): Promise<ApiResponse> => {
     });
 };
 
-export interface ResponseProps {
-  success?: boolean;
-  data?: unknown;
-  message?: string;
-}
-
 export const request = {
   get: (url: string): Promise<ApiResponse> => {
     // console.log("get", sessionStorage.getItem(CONSTANTS.REACT_TOKEN))
     return callAPI(
       wretch(url)
-        .auth(`Bearer ${sessionStorage.getItem(CONSTANTS.REACT_TOKEN)}`)
+        .auth(
+          `Bearer ${sessionStorage.getItem(CONSTANTS.USER_DATA.REACT_TOKEN)}`
+        )
         .headers({ "content-type": "application/json" })
         .get()
     );
@@ -76,7 +79,9 @@ export const request = {
   getBlob: (url: string): Promise<ApiResponse> =>
     callBlobAPI(
       wretch(url)
-        .auth(`Bearer ${sessionStorage.getItem(CONSTANTS.REACT_TOKEN)}`)
+        .auth(
+          `Bearer ${sessionStorage.getItem(CONSTANTS.USER_DATA.REACT_TOKEN)}`
+        )
         // .headers({ 'content-type': 'application/json' })
         .get()
     ),
@@ -84,19 +89,25 @@ export const request = {
   post: (url: string, body: unknown): Promise<ApiResponse> =>
     callAPI(
       wretch(url)
-        .auth(`Bearer ${sessionStorage.getItem(CONSTANTS.REACT_TOKEN)}`)
+        .auth(
+          `Bearer ${sessionStorage.getItem(CONSTANTS.USER_DATA.REACT_TOKEN)}`
+        )
         .post(body)
     ),
   put: (url: string, body: unknown): Promise<ApiResponse> =>
     callAPI(
       wretch(url)
-        .auth(`Bearer ${sessionStorage.getItem(CONSTANTS.REACT_TOKEN)}`)
+        .auth(
+          `Bearer ${sessionStorage.getItem(CONSTANTS.USER_DATA.REACT_TOKEN)}`
+        )
         .put(body)
     ),
   delete: (url: string): Promise<ApiResponse> =>
     callAPI(
       wretch(url)
-        .auth(`Bearer ${sessionStorage.getItem(CONSTANTS.REACT_TOKEN)}`)
+        .auth(
+          `Bearer ${sessionStorage.getItem(CONSTANTS.USER_DATA.REACT_TOKEN)}`
+        )
         .delete()
     ),
   postFormForToken: (
@@ -117,7 +128,9 @@ export const request = {
   ): Promise<ApiResponse> =>
     callAPI(
       wretch(url)
-        .auth(`Bearer ${sessionStorage.getItem(CONSTANTS.REACT_TOKEN)}`)
+        .auth(
+          `Bearer ${sessionStorage.getItem(CONSTANTS.USER_DATA.REACT_TOKEN)}`
+        )
         .formData(params)
         .post()
     ),

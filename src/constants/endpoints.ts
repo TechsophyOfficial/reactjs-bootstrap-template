@@ -1,8 +1,6 @@
 export const TEMPLATE_UPLOAD =
   "/dms/v1/documents?documentTypeId=1194254867397447680";
 export const TEMPLATE_DOWNLOAD = "/dms/v1/documents";
-export const GENERATE_OTP = "";
-export const VERIFY_OTP = "";
 
 export const RUNTIME_FORM_ENDPOINT = "/form-runtime/v1/forms";
 export const RUNTIME_FORM_DATA_ENDPOINT = "/form-runtime/v1/form-data";

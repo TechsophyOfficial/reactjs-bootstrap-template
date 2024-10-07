@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import NotificationAlert from "./NotificationState";
-import UpdateTheme from "./ThemeState";
+import notificationAlert from "./NotificationState";
+import updateTheme from "./ThemeState";
 
 export default combineReducers({
-  NotificationAlert,
-  UpdateTheme,
+  notificationAlert,
+  updateTheme,
 });

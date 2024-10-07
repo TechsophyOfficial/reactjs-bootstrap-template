@@ -17,9 +17,9 @@ export const NavListItems = () => {
     navigate(`${process.env.PUBLIC_URL}/dashboard`);
   };
 
-  const handleTestClick = () => {
-    // Handle navigation to the Test page
-    navigate(`${process.env.PUBLIC_URL}/test`);
+  const handleOrdersClick = () => {
+    // Handle navigation to the Orders page
+    navigate(`${process.env.PUBLIC_URL}/placeholder`);
   };
 
   // You can define similar handler functions for other list items if needed
@@ -32,29 +32,11 @@ export const NavListItems = () => {
         </ListItemIcon>
         <ListItemText primary="Dashboard" />
       </ListItemButton>
-      <ListItemButton onClick={handleTestClick}>
+      <ListItemButton onClick={handleOrdersClick}>
         <ListItemIcon>
           <ShoppingCartIcon />
         </ListItemIcon>
         <ListItemText primary="Orders" />
-      </ListItemButton>
-      <ListItemButton>
-        <ListItemIcon>
-          <PeopleIcon />
-        </ListItemIcon>
-        <ListItemText primary="Customers" />
-      </ListItemButton>
-      <ListItemButton>
-        <ListItemIcon>
-          <BarChartIcon />
-        </ListItemIcon>
-        <ListItemText primary="Reports" />
-      </ListItemButton>
-      <ListItemButton>
-        <ListItemIcon>
-          <LayersIcon />
-        </ListItemIcon>
-        <ListItemText primary="Integrations" />
       </ListItemButton>
     </React.Fragment>
   );

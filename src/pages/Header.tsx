@@ -13,16 +13,17 @@ import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { useAppSelector } from "../redux/Hook";
 import { useDispatch } from "react-redux";
-import { styled } from "@mui/material/styles";
+import { styled, Theme } from "@mui/material/styles";
 import UserLogo from "../assets/images/man.png";
 import SideNav from "./SideNav";
 import { useKeycloak } from "@react-keycloak/web";
 import useCustomStyles from "../hooks/CustomStylesHook";
-// import "../styles/Header.css";
-import { useLocation } from "react-router-dom";
-import { useTheme } from "@emotion/react";
 
-// Styled AppBar component to control drawer state
+import { useLocation } from "react-router-dom";
+import { useTheme } from "@mui/material/styles";
+import { CircularProgress } from "@mui/material";
+import UserMenuItem from "../components/UserMenuItem";
+
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
 })<AppBarProps>(({ theme, open }) => ({
@@ -46,7 +47,7 @@ const drawerWidth: number = 240;
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
 }
-const styles=(theme:any)=>({
+const styles = (theme: Theme) => ({
   pageTitle: {
     textTransform: "capitalize",
   },
@@ -54,6 +55,7 @@ const styles=(theme:any)=>({
     minHeight: 48,
     paddingRight: 24,
   },
+
   headerIconButton: {
     marginRight: 36,
   },
@@ -65,7 +67,7 @@ const styles=(theme:any)=>({
     textTransform: "capitalize",
   },
   headerThemeButton: {
-    color: theme.palette.common.white, // Use theme's palette for consistent colors
+    color: theme.palette.common.white,
   },
   headerUserBox: {
     flexGrow: 0,
@@ -83,14 +85,19 @@ const styles=(theme:any)=>({
 });
 
 function Header() {
-  const themeDataState = useAppSelector((state) => state.UpdateTheme);
-  const theme= useTheme();
+  const themeDataState = useAppSelector((state) => state.updateTheme);
+  const theme = useTheme();
   const classes = useCustomStyles(styles, theme);
 
   const { keycloak } = useKeycloak();
-  const location = useLocation();
-  const routeName = location.pathname.split("/").pop(); // Assuming the last part of the path is the route name
+  const [isLoading, setIsLoading] = React.useState(true);
+  const userName = keycloak?.tokenParsed?.preferred_username || "User";
 
+  const location = useLocation();
+  const routeName =
+    location.pathname === "/"
+      ? "dashboard"
+      : location.pathname.split("/").pop();
   const [open, setOpen] = React.useState(false);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -109,7 +116,6 @@ function Header() {
   };
 
   const handleThemeChange = () => {
-    // Assuming themeDataState.mode contains the current mode (either "dark" or "light")
     const newMode = themeDataState.mode === "dark" ? "light" : "dark";
 
     dispatch({
@@ -122,8 +128,19 @@ function Header() {
   };
 
   const handleAppLogout = () => {
-    keycloak.logout();
+    if (keycloak) {
+      keycloak.logout();
+    }
   };
+  React.useEffect(() => {
+    if (keycloak?.tokenParsed) {
+      setIsLoading(false);
+    }
+  }, [keycloak]);
+
+  if (isLoading) {
+    return <CircularProgress color="secondary" />;
+  }
 
   return (
     <>
@@ -134,12 +151,13 @@ function Header() {
             color="inherit"
             aria-label="open drawer"
             onClick={toggleDrawer}
-            className={`${classes?.headerIconButton} ${open ? classes?.hidden : ""}`}
+            className={`${classes?.headerIconButton} ${
+              open ? classes?.hidden : ""
+            }`}
           >
             <MenuIcon />
           </IconButton>
 
-          {/* Route name */}
           <Typography
             component="h1"
             variant="h6"
@@ -150,32 +168,26 @@ function Header() {
             {routeName}
           </Typography>
 
-          {/* Theme toggle */}
           <Box>
             <IconButton onClick={handleThemeChange}>
               {themeDataState?.mode === "light" ? (
-                <DarkModeOutlinedIcon
-                  fontSize="small"
-                  className={classes?.headerDarkmodeOutlinedIcon}
-                />
+                <DarkModeOutlinedIcon fontSize="small" />
               ) : (
                 <DarkModeIcon fontSize="small" />
               )}
             </IconButton>
           </Box>
 
-          {/* User menu */}
           <Box className={classes?.headerUserBox}>
             <Tooltip title="Open settings">
               <IconButton
                 onClick={handleOpenUserMenu}
                 className={classes?.headerUserButton}
               >
-                <Avatar alt="Remy Sharp" src={UserLogo} />
+                <Avatar alt={userName} src={UserLogo} />
               </IconButton>
             </Tooltip>
 
-            {/* User menu items */}
             <Menu
               className={classes?.headerUserMenu}
               id="menu-appbar"
@@ -192,22 +204,17 @@ function Header() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              <MenuItem onClick={handleCloseUserMenu}>
-                <Typography textAlign="center">Profile</Typography>
-              </MenuItem>
-              <MenuItem onClick={handleAppLogout}>
-                <Typography textAlign="center">Logout</Typography>
-              </MenuItem>
+              <UserMenuItem
+                onClose={handleCloseUserMenu}
+                onLogout={handleAppLogout}
+              />
             </Menu>
           </Box>
         </Toolbar>
       </AppBar>
 
-      {/* SideNav component */}
       <SideNav open={open} toggleDrawer={toggleDrawer} />
     </>
   );
 }
 export default Header;
-
-/* Control Flow: index -> App -> Wrapper -> Header*/

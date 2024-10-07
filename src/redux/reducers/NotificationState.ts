@@ -1,35 +1,31 @@
-export interface notifyAlert {
+export type AlertType = "success" | "error" | "info" | "warning";
+
+export interface NotifyAlert {
   enable: boolean;
-  type: string;
+  type: AlertType;
   message: string;
   duration: number;
 }
 
 export type NotifyEvent = {
   type: "SEND_ALERT";
-  data: notifyAlert;
+  data: NotifyAlert;
 };
 
-export const initialAlertState: notifyAlert = {
+export const initialAlertState: NotifyAlert = {
   enable: false,
-  type: "",
+  type: "success",
   message: "",
   duration: 0,
 };
 
 export default (
-  state: notifyAlert = initialAlertState,
+  state: NotifyAlert = initialAlertState,
   event: NotifyEvent
-): notifyAlert => {
+): NotifyAlert => {
   switch (event.type) {
     case "SEND_ALERT":
-      return {
-        ...state,
-        enable: event.data.enable,
-        type: event.data.type,
-        message: event.data.message,
-        duration: event.data.duration,
-      };
+      return event.data;
     default:
       return state;
   }
