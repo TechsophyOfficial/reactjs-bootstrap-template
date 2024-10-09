@@ -69,9 +69,7 @@ export const request = {
     // console.log("get", sessionStorage.getItem(CONSTANTS.REACT_TOKEN))
     return callAPI(
       wretch(url)
-        .auth(
-          `Bearer ${sessionStorage.getItem(CONSTANTS.USER_DATA.REACT_TOKEN)}`
-        )
+        .auth(`Bearer ${sessionStorage.getItem(CONSTANTS.REACT_TOKEN)}`)
         .headers({ "content-type": "application/json" })
         .get()
     );
@@ -79,9 +77,7 @@ export const request = {
   getBlob: (url: string): Promise<ApiResponse> =>
     callBlobAPI(
       wretch(url)
-        .auth(
-          `Bearer ${sessionStorage.getItem(CONSTANTS.USER_DATA.REACT_TOKEN)}`
-        )
+        .auth(`Bearer ${sessionStorage.getItem(CONSTANTS.REACT_TOKEN)}`)
         // .headers({ 'content-type': 'application/json' })
         .get()
     ),
@@ -89,25 +85,19 @@ export const request = {
   post: (url: string, body: unknown): Promise<ApiResponse> =>
     callAPI(
       wretch(url)
-        .auth(
-          `Bearer ${sessionStorage.getItem(CONSTANTS.USER_DATA.REACT_TOKEN)}`
-        )
+        .auth(`Bearer ${sessionStorage.getItem(CONSTANTS.REACT_TOKEN)}`)
         .post(body)
     ),
   put: (url: string, body: unknown): Promise<ApiResponse> =>
     callAPI(
       wretch(url)
-        .auth(
-          `Bearer ${sessionStorage.getItem(CONSTANTS.USER_DATA.REACT_TOKEN)}`
-        )
+        .auth(`Bearer ${sessionStorage.getItem(CONSTANTS.REACT_TOKEN)}`)
         .put(body)
     ),
   delete: (url: string): Promise<ApiResponse> =>
     callAPI(
       wretch(url)
-        .auth(
-          `Bearer ${sessionStorage.getItem(CONSTANTS.USER_DATA.REACT_TOKEN)}`
-        )
+        .auth(`Bearer ${sessionStorage.getItem(CONSTANTS.REACT_TOKEN)}`)
         .delete()
     ),
   postFormForToken: (
@@ -128,9 +118,7 @@ export const request = {
   ): Promise<ApiResponse> =>
     callAPI(
       wretch(url)
-        .auth(
-          `Bearer ${sessionStorage.getItem(CONSTANTS.USER_DATA.REACT_TOKEN)}`
-        )
+        .auth(`Bearer ${sessionStorage.getItem(CONSTANTS.REACT_TOKEN)}`)
         .formData(params)
         .post()
     ),

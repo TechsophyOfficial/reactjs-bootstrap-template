@@ -16,13 +16,14 @@ import { useDispatch } from "react-redux";
 import { styled, Theme } from "@mui/material/styles";
 import UserLogo from "../assets/images/man.png";
 import SideNav from "./SideNav";
-import { useKeycloak } from "@react-keycloak/web";
+// import { useKeycloak } from "@react-keycloak/web";
 import useCustomStyles from "../hooks/CustomStylesHook";
 
 import { useLocation } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
 import { CircularProgress } from "@mui/material";
 import UserMenuItem from "../components/UserMenuItem";
+import KeycloakService from "../utils/keycloakService";
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
@@ -89,9 +90,11 @@ function Header() {
   const theme = useTheme();
   const classes = useCustomStyles(styles, theme);
 
-  const { keycloak } = useKeycloak();
+  // const { keycloak } = useKeycloak();
   const [isLoading, setIsLoading] = React.useState(true);
-  const userName = keycloak?.tokenParsed?.preferred_username || "User";
+  // const userName = KeycloakService?.tokenParsed?.preferred_username || "User";
+  const userName = "User";
+  console.log("KeycloakService", KeycloakService);
 
   const location = useLocation();
   const routeName =
@@ -128,19 +131,21 @@ function Header() {
   };
 
   const handleAppLogout = () => {
-    if (keycloak) {
-      keycloak.logout();
+    if (KeycloakService) {
+      // keycloak.logout();
+      KeycloakService.doLogout();
     }
   };
-  React.useEffect(() => {
-    if (keycloak?.tokenParsed) {
-      setIsLoading(false);
-    }
-  }, [keycloak]);
 
-  if (isLoading) {
-    return <CircularProgress color="secondary" />;
-  }
+  // React.useEffect(() => {
+  //   if (keycloak?.tokenParsed) {
+  //     setIsLoading(false);
+  //   }
+  // }, [keycloak]);
+
+  // if (isLoading) {
+  //   return <CircularProgress color="secondary" />;
+  // }
 
   return (
     <>

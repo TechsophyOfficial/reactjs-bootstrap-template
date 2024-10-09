@@ -9,6 +9,7 @@ import { StyledEngineProvider } from "@mui/material/styles";
 import LoadSxpChat from "../components/chatWidget";
 import useCustomStyles from "../hooks/CustomStylesHook";
 import { Theme } from "@mui/material/styles";
+import KeycloakService from "../utils/keycloakService";
 // We use the Material-UI (MUI) library for styling
 
 const styles = (theme: Theme) => ({
@@ -61,6 +62,10 @@ const Wrapper = (props: {
 
   // Apllication Theme End
   const classes = useCustomStyles(styles, theme);
+
+  // React.useEffect(() => {
+  //   KeycloakService.doLogout();
+  // }, []);
 
   return (
     <StyledEngineProvider injectFirst>
